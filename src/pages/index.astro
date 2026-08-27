@@ -11,6 +11,7 @@ import '../styles/catalog.css';
         <a href="#work">Works</a>
         <a href="#practical-ai">Practical AI</a>
         <a href="#articles">Stories & Articles</a>
+        <a href="/picks">Ted’s Picks</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
       </nav>
     </div>
@@ -90,10 +91,9 @@ import '../styles/catalog.css';
                           <a
                             class="button button-gold"
                             href={item.primaryUrl}
-                            target="_blank"
-                            rel={item.affiliate ? 'sponsored nofollow noopener' : 'noopener'}
+                            target={item.primaryUrl.startsWith('http') ? '_blank' : undefined}
+                            rel={item.primaryUrl.startsWith('http') ? 'noopener' : undefined}
                           >{item.primaryLabel}</a>
-                          {item.affiliate && <p class="affiliate-note">Paid link · Commissions earned</p>}
                         </div>
                       )}
                     </article>
@@ -119,23 +119,26 @@ import '../styles/catalog.css';
       </div>
     </section>
 
-    <section>
+    <section id="picks-preview">
       <div class="site-shell">
         <div class="section-head">
           <p class="eyebrow">TED’S PICKS</p>
-          <h2>Things worth paying for.</h2>
-          <p>Recommendations can cross all three areas, but only when something has earned its place.</p>
+          <h2>Buy less. Choose better.</h2>
+          <p>A separate recommendation board for tools, books, training gear, kitchen equipment, and other things that have earned a place — kept apart from the main body of work.</p>
         </div>
         <div class="card-grid two">
           <article class="card">
-            <p class="tag">HOW RECOMMENDATIONS WORK</p>
-            <h3>If I wouldn’t recommend it to a friend, it doesn’t belong here.</h3>
-            <p>Some future recommendations may include affiliate links. Those relationships will be identified clearly, and the recommendation comes first.</p>
+            <p class="tag">THE FILTER</p>
+            <h3>What problem does it solve?</h3>
+            <p>Every recommendation should explain who it helps, why it earned a spot, and when I would skip it.</p>
           </article>
           <article class="card">
-            <p class="tag">THE STANDARD</p>
-            <h3>Useful first. Commercial second.</h3>
-            <p>This site can point to Amazon, Payhip, and other trusted platforms without turning every page into a checkout screen.</p>
+            <p class="tag">THE BOARD</p>
+            <h3>Ted’s Picks</h3>
+            <p>Recommendations, useful buying guidance, and clearly disclosed paid links live on their own page.</p>
+            <div class="card-actions">
+              <a class="button button-gold" href="/picks">Explore Ted’s Picks</a>
+            </div>
           </article>
         </div>
       </div>
@@ -144,11 +147,9 @@ import '../styles/catalog.css';
 
   <footer class="site-footer">
     <div class="site-shell footer-row">
-      <div>
-        <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
-        <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
-      </div>
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
       <div class="footer-links">
+        <a href="/picks">Ted’s Picks</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
         <a href="https://leaveonelighton.org" target="_blank" rel="noopener">Leave One Light On</a>
         <a href="#main">Back to top</a>
