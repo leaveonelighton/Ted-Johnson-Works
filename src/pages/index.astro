@@ -87,7 +87,13 @@ import '../styles/catalog.css';
                       {item.highlight && <p class="work-highlight"><strong>{item.highlight}</strong></p>}
                       {item.primaryUrl && (
                         <div class="card-actions">
-                          <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
+                          <a
+                            class="button button-gold"
+                            href={item.primaryUrl}
+                            target="_blank"
+                            rel={item.affiliate ? 'sponsored nofollow noopener' : 'noopener'}
+                          >{item.primaryLabel}</a>
+                          {item.affiliate && <p class="affiliate-note">Paid link · Commissions earned</p>}
                         </div>
                       )}
                     </article>
@@ -138,7 +144,10 @@ import '../styles/catalog.css';
 
   <footer class="site-footer">
     <div class="site-shell footer-row">
-      <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
+      <div>
+        <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
+        <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
+      </div>
       <div class="footer-links">
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
         <a href="https://leaveonelighton.org" target="_blank" rel="noopener">Leave One Light On</a>
