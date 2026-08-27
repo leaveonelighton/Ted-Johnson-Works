@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/article.css';
+
+const title = 'How I Use Payhip to Sell Practical Guides | Ted Johnson Works';
+const description = 'A practical look at using Payhip for digital guides and direct services without building a full ecommerce system from scratch.';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/articles/how-i-built-ted-johnson-works">Website Build</a>
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="article-hero">
+      <div class="site-shell">
+        <div class="article-hero-panel">
+          <p class="eyebrow">CREATOR WORKFLOW</p>
+          <h1>How I use Payhip to sell practical guides.</h1>
+          <p class="article-dek">I did not need a warehouse, shipping department, or complicated ecommerce build. I needed a clean way to turn useful knowledge into something a customer could actually buy and receive.</p>
+          <p class="article-meta">Digital products · Direct services · Low overhead</p>
+        </div>
+      </div>
+    </section>
+
+    <article class="site-shell article-body">
+      <p>The easiest way to overcomplicate a small digital business is to build the store before deciding what problem the product solves.</p>
+
+      <p>I went the other direction. Start with something useful. Package it clearly. Then use a platform that already knows how to handle the transaction and delivery.</p>
+
+      <h2>Why Payhip fit the job.</h2>
+      <p>For my practical technology material, I wanted low startup cost, no shipping, and no need to build my own payment and file-delivery system. Payhip gave me a simple storefront for digital products and a straightforward place to sell a direct service.</p>
+
+      <p>That let Ted Johnson Works stay focused on explanation, trust, and navigation while Payhip handles the transaction.</p>
+
+      <h2>The product still has to earn its place.</h2>
+      <p>A checkout page does not create value. The product has to solve a clear enough problem that somebody can understand why it exists.</p>
+      <p>For me, that means keeping the promise specific:</p>
+      <ul>
+        <li><strong>Everyday Tech Confidence:</strong> plain-English help for ordinary technology users.</li>
+        <li><strong>Technology Clarity Call:</strong> thirty focused minutes for one confusing technology problem, message, purchase decision, or next step.</li>
+      </ul>
+
+      <h2>Keep the path short.</h2>
+      <p>The customer should not have to decode the business model. They should be able to understand the problem, understand the offer, and click one obvious next step.</p>
+
+      <div class="article-callout">
+        <strong>The model:</strong>
+        <p>Useful knowledge → clear product → simple landing page → trusted checkout platform → delivery.</p>
+      </div>
+
+      <h2>What I like about separating the website from checkout.</h2>
+      <p>My main site does not have to become a store template. It can organize books, technology, AI, articles, and other work in a way that makes sense. When somebody is ready to buy a specific digital product or book a service, the button can take them to the platform built for that job.</p>
+
+      <p>That separation also makes the site easier to change. I can improve the content architecture without rebuilding a payment system every time.</p>
+
+      <h2>What I would tell another creator.</h2>
+      <p>Do not start by asking which platform has the most features. Start by asking what you can make that is genuinely useful and specific enough to explain in one sentence.</p>
+      <p>Then choose the lightest platform that can reliably deliver it.</p>
+
+      <section class="article-cta">
+        <p class="eyebrow">SEE THE MODEL</p>
+        <h2>Two examples already in use.</h2>
+        <p>You can see how I package a practical digital guide and a focused direct-help service without turning the whole website into a checkout screen.</p>
+        <div class="article-nav">
+          <a class="button button-gold" href="https://payhip.com/b/mX6EL" target="_blank" rel="noopener">View Everyday Tech Confidence</a>
+          <a class="button button-light" href="https://payhip.com/b/W6nhP" target="_blank" rel="noopener">View the Technology Clarity Call</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works.</p>
+      <div class="footer-links">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
