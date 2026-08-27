@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/article.css';
+
+const title = 'AI for People Who Don’t Want to Become AI Experts | Ted Johnson Works';
+const description = 'A plain-English approach to using AI for useful everyday work without hype, jargon, or pretending the tool is always right.';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/#articles">Stories & Articles</a>
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="article-hero">
+      <div class="site-shell">
+        <div class="article-hero-panel">
+          <p class="eyebrow">PRACTICAL AI</p>
+          <h1>AI for people who don’t want to become AI experts.</h1>
+          <p class="article-dek">You do not need to learn a new vocabulary just to get useful work out of AI. Start with the problem, ask clearly, verify what matters, and keep your own judgment in the loop.</p>
+          <p class="article-meta">Ted Johnson Works · Practical AI for real people</p>
+        </div>
+      </div>
+    </section>
+
+    <article class="site-shell article-body">
+      <p>I spent a career around technology, and one lesson kept repeating: the best technology is not the technology that sounds the most impressive. It is the technology that helps a real person do something useful.</p>
+
+      <p>AI should meet the same standard.</p>
+
+      <h2>Start with the job, not the jargon.</h2>
+      <p>People often begin with the wrong question: <em>What can AI do?</em> That question is so broad that it can make the whole subject feel bigger than it needs to be.</p>
+      <p>A better question is: <strong>What am I trying to get done?</strong></p>
+      <ul>
+        <li>Understand a confusing message.</li>
+        <li>Organize notes into something readable.</li>
+        <li>Compare two choices before spending money.</li>
+        <li>Turn an idea into a first draft.</li>
+        <li>Research a subject and identify what still needs verification.</li>
+        <li>Break a complicated problem into the next few steps.</li>
+      </ul>
+
+      <div class="article-callout">
+        <strong>The rule I use:</strong>
+        <p>AI can help me think, organize, research, draft, compare, and check. It does not get to replace my judgment.</p>
+      </div>
+
+      <h2>Ask better questions by giving useful context.</h2>
+      <p>You do not need a magic prompt. Tell the AI what you are trying to accomplish, what you already know, what constraints matter, and what a good answer would look like.</p>
+      <p>If the first answer misses the mark, correct it. Working with AI is often closer to working with a capable assistant than operating a search box.</p>
+
+      <h2>Verification is part of using AI well.</h2>
+      <p>AI can be fast and convincing at the same time it is wrong. That is why important facts, prices, policies, medical or legal information, current events, and anything that could materially affect a decision should be checked against reliable sources.</p>
+      <p>Speed is useful. Confidence without verification is not.</p>
+
+      <h2>Protect information before you paste it.</h2>
+      <p>One of the easiest habits to build is also one of the most important: stop before pasting private or sensitive information into any online tool. Remove account numbers, passwords, personal identifiers, confidential business information, and anything else that does not belong in the request.</p>
+
+      <h2>The goal is confidence, not dependence.</h2>
+      <p>I do not want people to feel that they have to ask AI how to tie their shoes. I want them to use it when it genuinely makes the next step clearer, faster, or better.</p>
+      <p>Used that way, AI becomes another practical tool in the toolbox.</p>
+
+      <section class="article-cta">
+        <p class="eyebrow">THE EVERYDAY AI COMPANION</p>
+        <h2>Want the full plain-English guide?</h2>
+        <p><em>The Everyday AI Companion</em> goes deeper into asking better questions, safer information handling, verification, writing, research, problem-solving, and everyday decisions.</p>
+        <div class="article-nav">
+          <a class="button button-gold" href="https://amzn.to/4d5znF7" target="_blank" rel="sponsored nofollow noopener">View The Everyday AI Companion on Amazon</a>
+          <a class="button button-light" href="/picks">See Ted’s Picks</a>
+        </div>
+        <p class="disclosure-copy">Paid affiliate link. I may earn a commission from qualifying purchases at no additional cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works.</p>
+      <div class="footer-links">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
