@@ -7,7 +7,7 @@ export const site = {
     eyebrow: 'THEODORE “TED” JOHNSON',
     title: 'A lifetime of work, stories, skills, and things worth sharing.',
     subtitle:
-      'Story & meaning. Technology & learning. Strength & practice. Different subjects, connected by one lifetime of learning by doing.',
+      'Story & meaning. Technology, AI & learning. Strength & practice. Different subjects, connected by one lifetime of learning by doing.',
   },
 };
 
@@ -21,8 +21,8 @@ export const pillars = [
   },
   {
     id: 'knowledge',
-    eyebrow: 'KNOWLEDGE • TOOLS • MIND',
-    label: 'Technology & Learning',
+    eyebrow: 'TECHNOLOGY • AI • LEARNING',
+    label: 'Technology, AI & Learning',
     description:
       'Practical technology, AI, teaching, and plain-English help built to make complicated things useful.',
   },
@@ -66,6 +66,17 @@ export const works = [
       'Plain-English help for using everyday technology with more confidence and less frustration.',
     primaryLabel: 'View the Guide',
     primaryUrl: 'https://payhip.com/b/mX6EL',
+  },
+  {
+    id: 'practical-ai',
+    pillar: 'knowledge',
+    type: 'Core Topic',
+    status: 'Growing',
+    aiFocus: true,
+    title: 'Practical AI for Real People',
+    description:
+      'Practical ways to use AI for everyday work, writing, research, problem-solving, and decisions — without drowning in jargon or hype.',
+    highlight: 'Useful, understandable, and grounded.',
   },
   {
     pillar: 'knowledge',
