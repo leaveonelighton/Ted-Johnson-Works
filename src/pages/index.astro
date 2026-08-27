@@ -9,6 +9,7 @@ import '../styles/catalog.css';
       <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#work">Works</a>
+        <a href="#practical-ai">Practical AI</a>
         <a href="#articles">Stories & Articles</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
       </nav>
@@ -24,6 +25,7 @@ import '../styles/catalog.css';
             <h1>{site.hero.title}</h1>
             <p class="hero-lede">{site.hero.subtitle}</p>
             <p><span class="highlight"><strong>Useful first. Commercial second.</strong></span></p>
+            <p class="hero-ai-note"><strong>Practical AI for real people</strong> — useful, understandable, and grounded.</p>
             <div class="actions">
               <a class="button button-gold" href="#work">Explore the Work</a>
               <a class="button button-light" href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">Start With the Story</a>
@@ -37,7 +39,7 @@ import '../styles/catalog.css';
         </div>
         <div class="cred-strip" aria-label="Ted Johnson background">
           <div><strong>Story & Meaning</strong><span>Books, lived experience, hope and practical compassion</span></div>
-          <div><strong>Technology & Learning</strong><span>Plain-English tools, teaching, AI and practical help</span></div>
+          <div><strong>Technology, AI & Learning</strong><span>Plain-English tools, teaching, practical AI and direct help</span></div>
           <div><strong>Strength & Practice</strong><span>Stewardship, training, discipline, martial arts and food</span></div>
         </div>
       </div>
@@ -72,7 +74,10 @@ import '../styles/catalog.css';
 
                 <div class="work-grid">
                   {pillarWorks.map((item) => (
-                    <article class:list={["work-card", { featured: item.featured }]}>
+                    <article
+                      id={item.id}
+                      class:list={["work-card", { featured: item.featured, "ai-focus": item.aiFocus }]}
+                    >
                       <div class="work-card-topline">
                         <span class="status-badge">{item.status}</span>
                         <span class="work-type">{item.type}</span>
