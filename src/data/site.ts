@@ -77,9 +77,8 @@ export const works = [
     description:
       'A Plain-English Guide to Using AI Confidently — practical help for better questions, safer information handling, verification, writing, research, problem-solving, and everyday decisions.',
     highlight: 'Practical AI for real people — useful, understandable, and grounded.',
-    primaryLabel: 'Get the AI Companion on Amazon',
-    primaryUrl: 'https://amzn.to/4d5znF7',
-    affiliate: true,
+    primaryLabel: 'See the AI Companion',
+    primaryUrl: '/picks#everyday-ai-companion',
   },
   {
     pillar: 'knowledge',
