@@ -70,13 +70,16 @@ export const works = [
   {
     id: 'practical-ai',
     pillar: 'knowledge',
-    type: 'Core Topic',
-    status: 'Growing',
+    type: 'AI Guide / Book',
+    status: 'Published',
     aiFocus: true,
-    title: 'Practical AI for Real People',
+    title: 'The Everyday AI Companion',
     description:
-      'Practical ways to use AI for everyday work, writing, research, problem-solving, and decisions — without drowning in jargon or hype.',
-    highlight: 'Useful, understandable, and grounded.',
+      'A Plain-English Guide to Using AI Confidently — practical help for better questions, safer information handling, verification, writing, research, problem-solving, and everyday decisions.',
+    highlight: 'Practical AI for real people — useful, understandable, and grounded.',
+    primaryLabel: 'Get the AI Companion on Amazon',
+    primaryUrl: 'https://amzn.to/4d5znF7',
+    affiliate: true,
   },
   {
     pillar: 'knowledge',
