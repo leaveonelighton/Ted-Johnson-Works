@@ -11,67 +11,108 @@ export const site = {
   },
 };
 
-export const currentWork = [
+export const workCategories = [
   {
-    category: 'Story & Life',
-    title: 'The Light in the Window',
-    description:
-      'A Journey of Faith, Hope, and Redemption — a story of belonging, second chances, and ordinary acts of kindness that can change a life.',
-    primaryLabel: 'Kindle — $7.99',
-    primaryUrl: 'https://www.amazon.com/dp/B0H5FD1MN3',
-    secondaryLabel: 'Paperback — $14.99',
-    secondaryUrl: 'https://www.amazon.com/dp/B0H9DJHD1M',
+    id: 'books',
+    label: 'Books & Writing',
+    description: 'Published books, stories, and longer-form work.',
   },
   {
-    category: 'Technology',
+    id: 'technology',
+    label: 'Technology & AI',
+    description: 'Plain-English technology guides and practical AI resources.',
+  },
+  {
+    id: 'services',
+    label: 'Services & Practical Help',
+    description: 'Direct help when one problem needs one clear next step.',
+  },
+  {
+    id: 'workbench',
+    label: 'From the Workbench',
+    description: 'Strength, martial arts, food, and other work being developed.',
+  },
+];
+
+export const works = [
+  {
+    category: 'books',
+    categoryLabel: 'Books & Writing',
+    status: 'Published',
+    title: 'The Light in the Window',
+    description:
+      'A story of belonging, second chances, faith, hope, and the ordinary people whose kindness can change a life.',
+    primaryLabel: 'Visit the Official Book Site',
+    primaryUrl: 'https://thelightinthewindowbook.com',
+  },
+  {
+    category: 'books',
+    categoryLabel: 'Books & Writing',
+    status: 'Published',
+    title: 'The Owner’s Manual for the Human Body — Stewardship',
+    description:
+      'A practical look at physical stewardship, training, discipline, and caring for the body you have been given.',
+    primaryLabel: 'Find on Amazon',
+    primaryUrl:
+      'https://www.amazon.com/s?k=The+Owner%27s+Manual+for+the+Human+Body+Stewardship+Theodore+Johnson',
+  },
+  {
+    category: 'technology',
+    categoryLabel: 'Technology & AI',
+    status: 'Available',
     title: 'Everyday Tech Confidence',
     description:
-      'Plain-English help for mastering everyday technology without jargon, intimidation, or unnecessary complexity.',
+      'Plain-English help for using everyday technology with more confidence and less frustration.',
     primaryLabel: 'View the Guide',
     primaryUrl: 'https://payhip.com/b/mX6EL',
   },
   {
-    category: 'Technology',
+    category: 'technology',
+    categoryLabel: 'Technology & AI',
+    status: 'Published',
+    title: 'The No-Nonsense Home Technology Checklist',
+    description:
+      'A practical Windows-user checklist for keeping everyday home technology understandable, useful, and under control.',
+    primaryLabel: 'Find on Amazon',
+    primaryUrl:
+      'https://www.amazon.com/s?k=The+No-Nonsense+Home+Technology+Checklist+Theodore+Johnson',
+  },
+  {
+    category: 'services',
+    categoryLabel: 'Services & Practical Help',
+    status: 'Available',
     title: 'Technology Clarity Call',
     description:
-      'Thirty minutes focused on one confusing message, technology problem, purchase decision, or clear next step.',
+      'Thirty focused minutes for one confusing message, technology problem, purchase decision, or next step.',
     highlight: 'One problem. One clear next step.',
     primaryLabel: 'Book a Clarity Call',
     primaryUrl: 'https://payhip.com/b/W6nhP',
   },
 ];
 
-export const shelves = [
-  {
-    id: 'technology',
-    label: 'TECHNOLOGY & AI',
-    title: 'Technology & AI',
-    description:
-      'Practical technology explained in plain English, with the emphasis on making technology useful instead of making life more complicated.',
-    status: 'More publications and resources coming here.',
-  },
+export const workbench = [
   {
     id: 'strength',
-    label: 'STRENGTH',
-    title: 'Strength & Stewardship',
+    label: 'STRENGTH & STEWARDSHIP',
+    title: 'Strength, Training & the Human Body',
     description:
       'Bodybuilding, physical training, discipline, and lessons learned from decades of paying attention to the human body.',
-    status: 'Book in development.',
+    status: 'More work in development.',
   },
   {
     id: 'martial-arts',
-    label: 'DISCIPLINE',
-    title: 'Martial Arts',
+    label: 'MARTIAL ARTS',
+    title: 'Practice, Discipline & Awareness',
     description:
-      'Training, discipline, movement, awareness, and the lessons martial arts carry far beyond the training floor.',
+      'Training, movement, awareness, and the lessons martial arts carry far beyond the training floor.',
     status: 'Book in development.',
   },
   {
     id: 'kitchen',
-    label: 'FROM THE KITCHEN',
-    title: 'Cooking & Food',
+    label: 'COOKING & FOOD',
+    title: 'From the Kitchen',
     description:
-      'Recipes, technique, family-food memories, and the practical lessons behind making something people genuinely want to eat again.',
+      'Recipes, technique, family-food memories, and the practical lessons behind making something people want to eat again.',
     status: 'Cookbook in development.',
   },
 ];
