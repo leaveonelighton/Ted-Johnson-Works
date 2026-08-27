@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, currentWork, shelves, articleIdeas } from '../data/site';
+---
+<BaseLayout>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#shelves">Explore</a>
+        <a href="#articles">Stories & Articles</a>
+        <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="site-shell">
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">{site.hero.eyebrow}</p>
+            <h1>{site.hero.title}</h1>
+            <p class="hero-lede">{site.hero.subtitle}</p>
+            <p><span class="highlight"><strong>Useful first. Commercial second.</strong></span></p>
+            <div class="actions">
+              <a class="button button-gold" href="#work">Explore the Work</a>
+              <a class="button button-light" href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">Start With the Story</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-label="Ted Johnson Works monogram">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="hero-monogram" aria-hidden="true">TJ</div>
+            <p class="hero-caption">Author · Technologist · Teacher · Builder</p>
+          </div>
+        </div>
+        <div class="cred-strip" aria-label="Ted Johnson background">
+          <div><strong>Decades in Technology</strong><span>Hands-on work, testing, support and problem solving</span></div>
+          <div><strong>Teacher & Practical Guide</strong><span>Plain-English help designed for real people</span></div>
+          <div><strong>Author & Builder</strong><span>Books, tools, stories and projects built from experience</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">AVAILABLE NOW</p>
+          <h2>Start with what Ted has built already.</h2>
+          <p>Books, practical technology and direct help — with clear paths to the places where each one is available.</p>
+        </div>
+        <div class="card-grid">
+          {currentWork.map((item) => (
+            <article class="card">
+              <p class="tag">{item.category.toUpperCase()}</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              {item.highlight && <p><span class="highlight"><strong>{item.highlight}</strong></span></p>}
+              <div class="card-actions">
+                <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
+                {item.secondaryUrl && (
+                  <a class="secondary-link" href={item.secondaryUrl} target="_blank" rel="noopener">{item.secondaryLabel} →</a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="shelves">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">THE FULL WORKSHOP</p>
+          <h2>Different subjects. One lifetime of learning by doing.</h2>
+          <p>Ted Johnson Works is intentionally broad enough to hold the work that exists today and the work still being built.</p>
+        </div>
+        <div class="shelf-grid">
+          {shelves.map((shelf) => (
+            <article class="shelf" id={shelf.id}>
+              <p class="eyebrow">{shelf.label}</p>
+              <h3>{shelf.title}</h3>
+              <p>{shelf.description}</p>
+              <p class="status">{shelf.status}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="articles">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">FROM TED’S WORKBENCH</p>
+          <h2>Stories and useful articles will connect the shelves.</h2>
+          <p>Each article can bring search and social traffic into one subject, then naturally introduce readers to another part of Ted’s work.</p>
+        </div>
+        <ul class="idea-list">
+          {articleIdeas.map((idea) => <li><strong>{idea}</strong></li>)}
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">TED’S PICKS</p>
+          <h2>Things worth paying for.</h2>
+          <p>The future recommendation library will cover technology, creator tools, training, martial arts and cooking — but only when a recommendation earns its place.</p>
+        </div>
+        <div class="card-grid two">
+          <article class="card">
+            <p class="tag">HOW RECOMMENDATIONS WORK</p>
+            <h3>If I wouldn’t recommend it to a friend, it doesn’t belong here.</h3>
+            <p>Some future recommendations may include affiliate links. Those relationships will be identified clearly, and the recommendation comes first.</p>
+          </article>
+          <article class="card">
+            <p class="tag">COMING NEXT</p>
+            <h3>A practical free resource</h3>
+            <p>The first free resource will give visitors something genuinely useful to take with them while creating a clean path for future email updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
+      <div class="footer-links">
+        <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
+        <a href="#main">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
