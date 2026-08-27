@@ -194,6 +194,19 @@
   width: 100%;
 }
 
+.affiliate-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: .72rem;
+  text-align: center;
+}
+
+.amazon-disclosure {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
 @media (max-width: 920px) {
   .work-grid {
     grid-template-columns: 1fr;
