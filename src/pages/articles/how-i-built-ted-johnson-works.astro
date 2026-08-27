@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/article.css';
+
+const title = 'How I Built TedJohnsonWorks.com Without Hiring an Agency | Ted Johnson Works';
+const description = 'A practical look at the stack and decisions behind TedJohnsonWorks.com: ChatGPT, GitHub, Astro, GitHub Actions, and Hostinger.';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/articles/ai-for-people-who-dont-want-to-become-ai-experts">Practical AI</a>
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="article-hero">
+      <div class="site-shell">
+        <div class="article-hero-panel">
+          <p class="eyebrow">BUILDING IN PUBLIC</p>
+          <h1>How I built TedJohnsonWorks.com without hiring an agency.</h1>
+          <p class="article-dek">The important part was not finding one magic tool. It was giving each tool one clear job and keeping a single source of truth.</p>
+          <p class="article-meta">ChatGPT · GitHub · Astro · GitHub Actions · Hostinger</p>
+        </div>
+      </div>
+    </section>
+
+    <article class="site-shell article-body">
+      <p>I spent a career working in technology, but building a modern personal site still forced me to learn some new habits. I did not want a generic author page, a noisy storefront, or five disconnected mini-sites fighting for attention.</p>
+
+      <p>I wanted one durable home for books, practical technology and AI, direct help, strength and practice, stories, and whatever comes next.</p>
+
+      <h2>The first decision was architecture, not appearance.</h2>
+      <p>It was tempting to begin with colors, banners, and buttons. Instead, the bigger question was: <strong>what belongs together?</strong></p>
+      <p>The site eventually settled into three subject pillars: Story & Meaning, Technology, AI & Learning, and Strength & Practice. Products, books, services, articles, and recommendations then became formats inside those pillars rather than competing categories.</p>
+
+      <h2>ChatGPT became the working partner.</h2>
+      <p>I use AI to help think through structure, challenge weak ideas, draft and revise copy, organize technical work, and keep a long project moving. The useful part is not asking AI to “make me a website.” The useful part is having an iterative partner that can work through one decision after another.</p>
+      <p>I still make the calls. AI helps me get to better calls faster.</p>
+
+      <h2>GitHub became the source of truth.</h2>
+      <p>Once the site moved into GitHub, every meaningful change had a home, a history, and a way back. That matters when a project starts moving quickly.</p>
+      <p>The main branch contains the source. A GitHub Actions workflow builds the static site and publishes the finished output to a dedicated deployment branch.</p>
+
+      <h2>Astro keeps the public site simple.</h2>
+      <p>The site is built as a static Astro project. That gives me structured source files, reusable layouts, and fast pages without needing a database just to display books, articles, and recommendations.</p>
+
+      <h2>Hostinger handles the public hosting.</h2>
+      <p>Hostinger pulls the built site from the deployment branch automatically. The practical result is straightforward: edit the source, commit it, let the build run, and the hosting layer receives the finished site.</p>
+
+      <div class="article-callout">
+        <strong>The workflow:</strong>
+        <p>Make the decision → update the source → commit to GitHub → automated build → deployment branch → Hostinger publishes the result.</p>
+      </div>
+
+      <h2>What I would do again.</h2>
+      <ul>
+        <li>Choose one source of truth early.</li>
+        <li>Separate source files from deployment output.</li>
+        <li>Settle the content architecture before polishing every card.</li>
+        <li>Keep the main site useful and let specialized platforms handle checkout where they already do it well.</li>
+        <li>Keep recommendations in their own clearly disclosed lane instead of turning every page into an affiliate wall.</li>
+      </ul>
+
+      <h2>What I would avoid.</h2>
+      <p>I would avoid manually copying production files around, creating a separate brand for every subject, stuffing affiliate links into unrelated content, or rebuilding something just because a new tool appeared.</p>
+      <p>The point is not to use more tools. It is to make the tools disappear behind a workflow that works.</p>
+
+      <section class="article-cta">
+        <p class="eyebrow">NEXT STEP</p>
+        <h2>Building something of your own?</h2>
+        <p>Ted’s Picks is where I separate the tools and services worth considering from the rest of the site. Direct technology help is also available when one problem needs one clear next step.</p>
+        <div class="article-nav">
+          <a class="button button-gold" href="/picks">Explore Ted’s Picks</a>
+          <a class="button button-light" href="https://payhip.com/b/W6nhP" target="_blank" rel="noopener">Book a Technology Clarity Call</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works.</p>
+      <div class="footer-links">
+        <a href="/start">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
