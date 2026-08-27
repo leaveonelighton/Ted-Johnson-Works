@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { pickCategories, picks } from '../data/picks';
+import '../styles/picks.css';
+
+const title = 'Ted’s Picks | Practical Recommendations from Ted Johnson';
+const description = 'A curated recommendation board for technology, AI, creator tools, training, martial arts, kitchen gear, books, and other things that have earned a place.';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Works</a>
+        <a href="/picks" aria-current="page">Ted’s Picks</a>
+        <a href="/#practical-ai">Practical AI</a>
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="picks-hero">
+      <div class="site-shell">
+        <div class="picks-hero-panel">
+          <p class="eyebrow">TED’S PICKS</p>
+          <h1>Buy less. Choose better.</h1>
+          <p class="picks-lede">This is the recommendation side of Ted Johnson Works — a separate decision board for things that solve a real problem, earn a recommendation, and are worth a closer look.</p>
+          <div class="picks-principles" aria-label="Recommendation principles">
+            <span>Problem first</span>
+            <span>Who it helps</span>
+            <span>Why it earned a spot</span>
+            <span>When to skip it</span>
+          </div>
+          <p class="disclosure-box"><strong>Disclosure:</strong> Some links on this page are paid affiliate links. If you buy through one, I may earn a commission at no additional cost to you. Recommendations are selected for usefulness first.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="picks-board">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">THE DECISION BOARD</p>
+          <h2>Recommendations with a reason.</h2>
+          <p>No endless product wall. Each item should explain what it solves, who it is for, and when it is not the right choice.</p>
+        </div>
+
+        <nav class="pick-category-nav" aria-label="Recommendation categories">
+          {pickCategories.map((category) => (
+            <a href={`#${category.id}`}>{category.label}</a>
+          ))}
+        </nav>
+
+        <div class="pick-category-stack">
+          {pickCategories.map((category) => {
+            const categoryPicks = picks.filter((pick) => pick.category === category.id);
+            return (
+              <section class="pick-category" id={category.id} aria-labelledby={`${category.id}-title`}>
+                <div class="pick-category-heading">
+                  <div>
+                    <p class="eyebrow">{category.label}</p>
+                    <h3 id={`${category.id}-title`}>{category.label}</h3>
+                  </div>
+                  <p>{category.description}</p>
+                </div>
+
+                {categoryPicks.length > 0 ? (
+                  <div class="pick-grid">
+                    {categoryPicks.map((pick) => (
+                      <article class="pick-card" id={pick.id}>
+                        <div class="pick-topline">
+                          <span class="pick-type">{pick.type}</span>
+                          <span class="pick-network">{pick.network}</span>
+                        </div>
+                        <h4>{pick.title}</h4>
+                        <p>{pick.description}</p>
+                        <dl class="decision-list">
+                          <div>
+                            <dt>Why it earned a spot</dt>
+                            <dd>{pick.why}</dd>
+                          </div>
+                          <div>
+                            <dt>Best for</dt>
+                            <dd>{pick.bestFor}</dd>
+                          </div>
+                          <div>
+                            <dt>Skip it if</dt>
+                            <dd>{pick.skipIf}</dd>
+                          </div>
+                        </dl>
+                        <div class="pick-actions">
+                          <a class="button button-gold" href={pick.url} target="_blank" rel="sponsored nofollow noopener">{pick.label}</a>
+                          <p class="paid-link-note">Paid link · I may earn a commission.</p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                ) : (
+                  <div class="empty-pick-state">
+                    <strong>Nothing earns a spot here yet.</strong>
+                    <p>This category stays empty until there is something worth recommending.</p>
+                  </div>
+                )}
+              </section>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="picks-partner-section">
+      <div class="site-shell">
+        <div class="partner-panel">
+          <p class="eyebrow">PARTNER DESK</p>
+          <h2>Commercial opportunities stay behind the editorial wall.</h2>
+          <p>Future affiliate programs, sponsor offers, and merchant relationships can be evaluated here without buying placement in the recommendation board. A relationship can create an opportunity to review something; it cannot guarantee a recommendation.</p>
+          <p class="partner-rule"><strong>The rule:</strong> no link swaps, no click exchanges, no pay-for-ranking, and no recommendation without a reason.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <div>
+        <p>© {new Date().getFullYear()} Ted Johnson Works. Useful first. Commercial second.</p>
+        <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Ted Johnson Works</a>
+        <a href="#main">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
