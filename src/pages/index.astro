@@ -1,13 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site, pillars, works, articleIdeas } from '../data/site';
+import { site, pillars, works } from '../data/site';
 import '../styles/catalog.css';
+
+const publishedArticles = [
+  {
+    title: 'AI for People Who Don’t Want to Become AI Experts',
+    url: '/articles/ai-for-people-who-dont-want-to-become-ai-experts',
+  },
+  {
+    title: 'How I Built TedJohnsonWorks.com Without Hiring an Agency',
+    url: '/articles/how-i-built-ted-johnson-works',
+  },
+  {
+    title: 'How I Use Payhip to Sell Practical Guides',
+    url: '/articles/how-i-use-payhip-to-sell-practical-guides',
+  },
+];
 ---
 <BaseLayout>
   <header class="site-header">
     <div class="site-shell nav">
       <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/start">Start Here</a>
         <a href="#work">Works</a>
         <a href="#practical-ai">Practical AI</a>
         <a href="#articles">Stories & Articles</a>
@@ -28,8 +44,8 @@ import '../styles/catalog.css';
             <p><span class="highlight"><strong>Useful first. Commercial second.</strong></span></p>
             <p class="hero-ai-note"><strong>Practical AI for real people</strong> — useful, understandable, and grounded.</p>
             <div class="actions">
-              <a class="button button-gold" href="#work">Explore the Work</a>
-              <a class="button button-light" href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">Start With the Story</a>
+              <a class="button button-gold" href="/start">Start Here</a>
+              <a class="button button-light" href="#work">Explore the Work</a>
             </div>
           </div>
           <div class="hero-art" aria-label="Ted Johnson Works monogram">
@@ -111,10 +127,12 @@ import '../styles/catalog.css';
         <div class="section-head">
           <p class="eyebrow">STORIES & ARTICLES</p>
           <h2>Useful ideas connect the three areas.</h2>
-          <p>Articles can begin with one subject and naturally lead readers into another part of the work without forcing everything into the same box.</p>
+          <p>Practical articles can bring readers in through a specific question, then lead them naturally to a book, guide, service, or recommendation when it actually fits.</p>
         </div>
         <ul class="idea-list">
-          {articleIdeas.map((idea) => <li><strong>{idea}</strong></li>)}
+          {publishedArticles.map((article) => (
+            <li><a href={article.url}><strong>{article.title}</strong></a></li>
+          ))}
         </ul>
       </div>
     </section>
@@ -149,6 +167,7 @@ import '../styles/catalog.css';
     <div class="site-shell footer-row">
       <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
       <div class="footer-links">
+        <a href="/start">Start Here</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
         <a href="https://leaveonelighton.org" target="_blank" rel="noopener">Leave One Light On</a>
