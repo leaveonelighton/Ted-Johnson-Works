@@ -1,9 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site, workCategories, works, workbench, articleIdeas } from '../data/site';
+import { site, pillars, works, articleIdeas } from '../data/site';
 import '../styles/catalog.css';
-
-const publishedCategories = workCategories.filter((category) => category.id !== 'workbench');
 ---
 <BaseLayout>
   <header class="site-header">
@@ -11,7 +9,6 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
       <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#work">Works</a>
-        <a href="#workbench">Workbench</a>
         <a href="#articles">Stories & Articles</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
       </nav>
@@ -39,9 +36,9 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
           </div>
         </div>
         <div class="cred-strip" aria-label="Ted Johnson background">
-          <div><strong>Decades in Technology</strong><span>Hands-on work, testing, support and problem solving</span></div>
-          <div><strong>Teacher & Practical Guide</strong><span>Plain-English help designed for real people</span></div>
-          <div><strong>Author & Builder</strong><span>Books, tools, stories and projects built from experience</span></div>
+          <div><strong>Story & Meaning</strong><span>Books, lived experience, hope and practical compassion</span></div>
+          <div><strong>Technology & Learning</strong><span>Plain-English tools, teaching, AI and practical help</span></div>
+          <div><strong>Strength & Practice</strong><span>Stewardship, training, discipline, martial arts and food</span></div>
         </div>
       </div>
     </section>
@@ -51,41 +48,43 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
         <div class="section-head">
           <p class="eyebrow">TED JOHNSON WORKS</p>
           <h2>Explore the Work</h2>
-          <p>Books, technology, practical guides, services, and lessons built from a lifetime of learning by doing.</p>
+          <p>Three areas organize the subjects. The labels on each card tell you what form the work takes — book, guide, service, movement, or project.</p>
         </div>
 
-        <nav class="category-nav" aria-label="Work categories">
-          {workCategories.map((category) => (
-            <a href={`#${category.id}`}>{category.label}</a>
+        <nav class="category-nav" aria-label="Work areas">
+          {pillars.map((pillar) => (
+            <a href={`#${pillar.id}`}>{pillar.label}</a>
           ))}
         </nav>
 
         <div class="catalog-stack">
-          {publishedCategories.map((category) => {
-            const categoryWorks = works.filter((work) => work.category === category.id);
+          {pillars.map((pillar) => {
+            const pillarWorks = works.filter((work) => work.pillar === pillar.id);
             return (
-              <section class="work-group" id={category.id} aria-labelledby={`${category.id}-title`}>
+              <section class="work-group" id={pillar.id} aria-labelledby={`${pillar.id}-title`}>
                 <div class="group-heading">
                   <div>
-                    <p class="eyebrow">{category.label}</p>
-                    <h3 id={`${category.id}-title`}>{category.label}</h3>
+                    <p class="eyebrow">{pillar.eyebrow}</p>
+                    <h3 id={`${pillar.id}-title`}>{pillar.label}</h3>
                   </div>
-                  <p>{category.description}</p>
+                  <p>{pillar.description}</p>
                 </div>
 
                 <div class="work-grid">
-                  {categoryWorks.map((item) => (
-                    <article class="work-card">
+                  {pillarWorks.map((item) => (
+                    <article class:list={["work-card", { featured: item.featured }]}>
                       <div class="work-card-topline">
                         <span class="status-badge">{item.status}</span>
-                        <span class="work-type">{item.categoryLabel}</span>
+                        <span class="work-type">{item.type}</span>
                       </div>
                       <h4>{item.title}</h4>
                       <p>{item.description}</p>
                       {item.highlight && <p class="work-highlight"><strong>{item.highlight}</strong></p>}
-                      <div class="card-actions">
-                        <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
-                      </div>
+                      {item.primaryUrl && (
+                        <div class="card-actions">
+                          <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
+                        </div>
+                      )}
                     </article>
                   ))}
                 </div>
@@ -96,32 +95,12 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
       </div>
     </section>
 
-    <section id="workbench" class="workbench-section">
-      <div class="site-shell">
-        <div class="section-head">
-          <p class="eyebrow">FROM THE WORKBENCH</p>
-          <h2>The rest of the work has a place to grow.</h2>
-          <p>Strength, martial arts, food, and future projects belong here without pretending unfinished work is already for sale.</p>
-        </div>
-        <div class="shelf-grid three">
-          {workbench.map((item) => (
-            <article class="shelf" id={item.id}>
-              <p class="eyebrow">{item.label}</p>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <p class="status">{item.status}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
     <section class="dark-section" id="articles">
       <div class="site-shell">
         <div class="section-head">
           <p class="eyebrow">STORIES & ARTICLES</p>
-          <h2>Useful ideas connect the shelves.</h2>
-          <p>Practical writing gives each subject room to stand on its own while still belonging to one body of work.</p>
+          <h2>Useful ideas connect the three areas.</h2>
+          <p>Articles can begin with one subject and naturally lead readers into another part of the work without forcing everything into the same box.</p>
         </div>
         <ul class="idea-list">
           {articleIdeas.map((idea) => <li><strong>{idea}</strong></li>)}
@@ -134,7 +113,7 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
         <div class="section-head">
           <p class="eyebrow">TED’S PICKS</p>
           <h2>Things worth paying for.</h2>
-          <p>Technology, creator tools, training, martial arts, and cooking recommendations will earn their place here one at a time.</p>
+          <p>Recommendations can cross all three areas, but only when something has earned its place.</p>
         </div>
         <div class="card-grid two">
           <article class="card">
@@ -157,6 +136,7 @@ const publishedCategories = workCategories.filter((category) => category.id !== 
       <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
       <div class="footer-links">
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
+        <a href="https://leaveonelighton.org" target="_blank" rel="noopener">Leave One Light On</a>
         <a href="#main">Back to top</a>
       </div>
     </div>
