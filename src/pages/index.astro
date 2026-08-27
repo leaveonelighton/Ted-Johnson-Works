@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site, workCategories, works, workbench, articleIdeas } from '../data/site';
+import '../styles/catalog.css';
 
 const publishedCategories = workCategories.filter((category) => category.id !== 'workbench');
 ---
