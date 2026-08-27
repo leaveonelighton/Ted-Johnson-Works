@@ -1,14 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site, currentWork, shelves, articleIdeas } from '../data/site';
+import { site, workCategories, works, workbench, articleIdeas } from '../data/site';
+
+const publishedCategories = workCategories.filter((category) => category.id !== 'workbench');
 ---
 <BaseLayout>
   <header class="site-header">
     <div class="site-shell nav">
       <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#shelves">Explore</a>
+        <a href="#work">Works</a>
+        <a href="#workbench">Workbench</a>
         <a href="#articles">Stories & Articles</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
       </nav>
@@ -43,46 +45,70 @@ import { site, currentWork, shelves, articleIdeas } from '../data/site';
       </div>
     </section>
 
-    <section id="work">
+    <section id="work" class="catalog-section">
       <div class="site-shell">
         <div class="section-head">
-          <p class="eyebrow">AVAILABLE NOW</p>
-          <h2>Start with what Ted has built already.</h2>
-          <p>Books, practical technology and direct help — with clear paths to the places where each one is available.</p>
+          <p class="eyebrow">TED JOHNSON WORKS</p>
+          <h2>Explore the Work</h2>
+          <p>Books, technology, practical guides, services, and lessons built from a lifetime of learning by doing.</p>
         </div>
-        <div class="card-grid">
-          {currentWork.map((item) => (
-            <article class="card">
-              <p class="tag">{item.category.toUpperCase()}</p>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              {item.highlight && <p><span class="highlight"><strong>{item.highlight}</strong></span></p>}
-              <div class="card-actions">
-                <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
-                {item.secondaryUrl && (
-                  <a class="secondary-link" href={item.secondaryUrl} target="_blank" rel="noopener">{item.secondaryLabel} →</a>
-                )}
-              </div>
-            </article>
+
+        <nav class="category-nav" aria-label="Work categories">
+          {workCategories.map((category) => (
+            <a href={`#${category.id}`}>{category.label}</a>
           ))}
+        </nav>
+
+        <div class="catalog-stack">
+          {publishedCategories.map((category) => {
+            const categoryWorks = works.filter((work) => work.category === category.id);
+            return (
+              <section class="work-group" id={category.id} aria-labelledby={`${category.id}-title`}>
+                <div class="group-heading">
+                  <div>
+                    <p class="eyebrow">{category.label}</p>
+                    <h3 id={`${category.id}-title`}>{category.label}</h3>
+                  </div>
+                  <p>{category.description}</p>
+                </div>
+
+                <div class="work-grid">
+                  {categoryWorks.map((item) => (
+                    <article class="work-card">
+                      <div class="work-card-topline">
+                        <span class="status-badge">{item.status}</span>
+                        <span class="work-type">{item.categoryLabel}</span>
+                      </div>
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                      {item.highlight && <p class="work-highlight"><strong>{item.highlight}</strong></p>}
+                      <div class="card-actions">
+                        <a class="button button-gold" href={item.primaryUrl} target="_blank" rel="noopener">{item.primaryLabel}</a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </div>
     </section>
 
-    <section id="shelves">
+    <section id="workbench" class="workbench-section">
       <div class="site-shell">
         <div class="section-head">
-          <p class="eyebrow">THE FULL WORKSHOP</p>
-          <h2>Different subjects. One lifetime of learning by doing.</h2>
-          <p>Ted Johnson Works is intentionally broad enough to hold the work that exists today and the work still being built.</p>
+          <p class="eyebrow">FROM THE WORKBENCH</p>
+          <h2>The rest of the work has a place to grow.</h2>
+          <p>Strength, martial arts, food, and future projects belong here without pretending unfinished work is already for sale.</p>
         </div>
-        <div class="shelf-grid">
-          {shelves.map((shelf) => (
-            <article class="shelf" id={shelf.id}>
-              <p class="eyebrow">{shelf.label}</p>
-              <h3>{shelf.title}</h3>
-              <p>{shelf.description}</p>
-              <p class="status">{shelf.status}</p>
+        <div class="shelf-grid three">
+          {workbench.map((item) => (
+            <article class="shelf" id={item.id}>
+              <p class="eyebrow">{item.label}</p>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <p class="status">{item.status}</p>
             </article>
           ))}
         </div>
@@ -92,9 +118,9 @@ import { site, currentWork, shelves, articleIdeas } from '../data/site';
     <section class="dark-section" id="articles">
       <div class="site-shell">
         <div class="section-head">
-          <p class="eyebrow">FROM TED’S WORKBENCH</p>
-          <h2>Stories and useful articles will connect the shelves.</h2>
-          <p>Each article can bring search and social traffic into one subject, then naturally introduce readers to another part of Ted’s work.</p>
+          <p class="eyebrow">STORIES & ARTICLES</p>
+          <h2>Useful ideas connect the shelves.</h2>
+          <p>Practical writing gives each subject room to stand on its own while still belonging to one body of work.</p>
         </div>
         <ul class="idea-list">
           {articleIdeas.map((idea) => <li><strong>{idea}</strong></li>)}
@@ -107,7 +133,7 @@ import { site, currentWork, shelves, articleIdeas } from '../data/site';
         <div class="section-head">
           <p class="eyebrow">TED’S PICKS</p>
           <h2>Things worth paying for.</h2>
-          <p>The future recommendation library will cover technology, creator tools, training, martial arts and cooking — but only when a recommendation earns its place.</p>
+          <p>Technology, creator tools, training, martial arts, and cooking recommendations will earn their place here one at a time.</p>
         </div>
         <div class="card-grid two">
           <article class="card">
@@ -116,9 +142,9 @@ import { site, currentWork, shelves, articleIdeas } from '../data/site';
             <p>Some future recommendations may include affiliate links. Those relationships will be identified clearly, and the recommendation comes first.</p>
           </article>
           <article class="card">
-            <p class="tag">COMING NEXT</p>
-            <h3>A practical free resource</h3>
-            <p>The first free resource will give visitors something genuinely useful to take with them while creating a clean path for future email updates.</p>
+            <p class="tag">THE STANDARD</p>
+            <h3>Useful first. Commercial second.</h3>
+            <p>This site can point to Amazon, Payhip, and other trusted platforms without turning every page into a checkout screen.</p>
           </article>
         </div>
       </div>
