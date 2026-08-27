@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/article.css';
+
+const title = 'Start Here | Ted Johnson Works';
+const description = 'Choose the next practical step: direct technology help, everyday tech confidence, practical AI, or curated recommendations.';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Works</a>
+        <a href="/start" aria-current="page">Start Here</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="/#articles">Stories & Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="article-hero">
+      <div class="site-shell">
+        <div class="article-hero-panel">
+          <p class="eyebrow">START HERE</p>
+          <h1>One need. One useful next step.</h1>
+          <p class="article-dek">You do not need to wander through the whole site. Pick the problem that sounds most like yours and go straight there.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="site-shell">
+        <div class="start-grid">
+          <article class="start-card">
+            <p class="eyebrow">DIRECT HELP</p>
+            <h2>I have one technology problem and I need an answer.</h2>
+            <p>Thirty focused minutes for one confusing message, technology problem, purchase decision, or next step.</p>
+            <div class="actions">
+              <a class="button button-gold" href="https://payhip.com/b/W6nhP" target="_blank" rel="noopener">Book a Technology Clarity Call</a>
+            </div>
+          </article>
+
+          <article class="start-card">
+            <p class="eyebrow">PRACTICAL AI</p>
+            <h2>I want to use AI without becoming an AI expert.</h2>
+            <p>Start with plain-English guidance for better questions, verification, writing, research, problem-solving, and everyday decisions.</p>
+            <div class="actions">
+              <a class="button button-gold" href="/articles/ai-for-people-who-dont-want-to-become-ai-experts">Start with Practical AI</a>
+            </div>
+          </article>
+
+          <article class="start-card">
+            <p class="eyebrow">EVERYDAY TECHNOLOGY</p>
+            <h2>I want to feel more confident with the technology I already use.</h2>
+            <p>Everyday Tech Confidence is built for ordinary users who want practical steps without jargon or unnecessary complexity.</p>
+            <div class="actions">
+              <a class="button button-gold" href="https://payhip.com/b/mX6EL" target="_blank" rel="noopener">View Everyday Tech Confidence</a>
+            </div>
+          </article>
+
+          <article class="start-card">
+            <p class="eyebrow">BUYING DECISIONS</p>
+            <h2>I am trying to decide what is actually worth paying for.</h2>
+            <p>Ted’s Picks is the separate recommendation board: what a product solves, who it is for, why it earned a spot, and when to skip it.</p>
+            <div class="actions">
+              <a class="button button-gold" href="/picks">Explore Ted’s Picks</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Useful first. Commercial second.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/picks">Ted’s Picks</a>
+        <a href="#main">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
