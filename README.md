@@ -40,14 +40,17 @@ Most homepage offerings and future shelves are defined in `src/data/site.ts`. Up
 
 Primary domain: `https://tedjohnsonworks.com`
 
-Source of truth: this GitHub repository.
+Source of truth: the `main` branch of this GitHub repository.
 
-Recommended Hostinger deployment settings:
+GitHub Actions automatically builds `main` and force-publishes only the compiled static output to the `hostinger` branch. Hostinger should deploy that branch directly to the website root.
+
+Recommended Hostinger Git settings:
 
 - Repository: `leaveonelighton/Ted-Johnson-Works`
-- Branch: `main`
-- Install command: `npm install`
-- Build command: `npm run build`
-- Output directory: `dist`
+- Branch: `hostinger`
+- Root directory: `public_html`
+- Auto-deployment: enabled
+
+Do not connect Hostinger directly to `main` for this static deployment path; `main` contains Astro source code while `hostinger` contains the production-ready HTML/CSS/assets.
 
 Do not place Hostinger credentials or deployment secrets in repository files.
