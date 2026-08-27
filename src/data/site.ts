@@ -7,58 +7,59 @@ export const site = {
     eyebrow: 'THEODORE “TED” JOHNSON',
     title: 'A lifetime of work, stories, skills, and things worth sharing.',
     subtitle:
-      'Books. Technology & AI. Strength. Martial arts. Food. Life. Different subjects, connected by one lifetime of learning by doing.',
+      'Story & meaning. Technology & learning. Strength & practice. Different subjects, connected by one lifetime of learning by doing.',
   },
 };
 
-export const workCategories = [
+export const pillars = [
   {
-    id: 'books',
-    label: 'Books & Writing',
-    description: 'Published books, stories, and longer-form work.',
+    id: 'story',
+    eyebrow: 'STORY • MEANING • SOUL',
+    label: 'Story & Meaning',
+    description:
+      'Books, stories, hope, and the work that asks what a life can mean to another person.',
   },
   {
-    id: 'technology',
-    label: 'Technology & AI',
-    description: 'Plain-English technology guides and practical AI resources.',
+    id: 'knowledge',
+    eyebrow: 'KNOWLEDGE • TOOLS • MIND',
+    label: 'Technology & Learning',
+    description:
+      'Practical technology, AI, teaching, and plain-English help built to make complicated things useful.',
   },
   {
-    id: 'services',
-    label: 'Services & Practical Help',
-    description: 'Direct help when one problem needs one clear next step.',
-  },
-  {
-    id: 'workbench',
-    label: 'From the Workbench',
-    description: 'Strength, martial arts, food, and other work being developed.',
+    id: 'practice',
+    eyebrow: 'STRENGTH • DISCIPLINE • BODY',
+    label: 'Strength & Practice',
+    description:
+      'Physical stewardship, training, martial arts, food, discipline, and lessons learned through practice.',
   },
 ];
 
 export const works = [
   {
-    category: 'books',
-    categoryLabel: 'Books & Writing',
+    pillar: 'story',
+    type: 'Featured Book',
     status: 'Published',
+    featured: true,
     title: 'The Light in the Window',
     description:
-      'A story of belonging, second chances, faith, hope, and the ordinary people whose kindness can change a life.',
+      'A Journey of Faith, Hope, and Redemption — a story of belonging, second chances, and the ordinary acts of kindness that can change a life.',
     primaryLabel: 'Visit the Official Book Site',
     primaryUrl: 'https://thelightinthewindowbook.com',
   },
   {
-    category: 'books',
-    categoryLabel: 'Books & Writing',
-    status: 'Published',
-    title: 'The Owner’s Manual for the Human Body — Stewardship',
+    pillar: 'story',
+    type: 'Movement',
+    status: 'Active',
+    title: 'Leave One Light On',
     description:
-      'A practical look at physical stewardship, training, discipline, and caring for the body you have been given.',
-    primaryLabel: 'Find on Amazon',
-    primaryUrl:
-      'https://www.amazon.com/s?k=The+Owner%27s+Manual+for+the+Human+Body+Stewardship+Theodore+Johnson',
+      'A movement of hope and practical compassion that grew from the story: notice the need, then take one meaningful step.',
+    primaryLabel: 'Explore Leave One Light On',
+    primaryUrl: 'https://leaveonelighton.org',
   },
   {
-    category: 'technology',
-    categoryLabel: 'Technology & AI',
+    pillar: 'knowledge',
+    type: 'Guide',
     status: 'Available',
     title: 'Everyday Tech Confidence',
     description:
@@ -67,8 +68,8 @@ export const works = [
     primaryUrl: 'https://payhip.com/b/mX6EL',
   },
   {
-    category: 'technology',
-    categoryLabel: 'Technology & AI',
+    pillar: 'knowledge',
+    type: 'Book / Checklist',
     status: 'Published',
     title: 'The No-Nonsense Home Technology Checklist',
     description:
@@ -78,8 +79,8 @@ export const works = [
       'https://www.amazon.com/s?k=The+No-Nonsense+Home+Technology+Checklist+Theodore+Johnson',
   },
   {
-    category: 'services',
-    categoryLabel: 'Services & Practical Help',
+    pillar: 'knowledge',
+    type: 'Service',
     status: 'Available',
     title: 'Technology Clarity Call',
     description:
@@ -88,32 +89,40 @@ export const works = [
     primaryLabel: 'Book a Clarity Call',
     primaryUrl: 'https://payhip.com/b/W6nhP',
   },
-];
-
-export const workbench = [
   {
-    id: 'strength',
-    label: 'STRENGTH & STEWARDSHIP',
+    pillar: 'practice',
+    type: 'Book',
+    status: 'Published',
+    title: 'The Owner’s Manual for the Human Body — Stewardship',
+    description:
+      'A practical look at physical stewardship, training, discipline, and caring for the body you have been given.',
+    primaryLabel: 'Find on Amazon',
+    primaryUrl:
+      'https://www.amazon.com/s?k=The+Owner%27s+Manual+for+the+Human+Body+Stewardship+Theodore+Johnson',
+  },
+  {
+    pillar: 'practice',
+    type: 'Work in Development',
+    status: 'In Development',
     title: 'Strength, Training & the Human Body',
     description:
-      'Bodybuilding, physical training, discipline, and lessons learned from decades of paying attention to the human body.',
-    status: 'More work in development.',
+      'Bodybuilding, physical training, consistency, and lessons learned from decades of paying attention to the human body.',
   },
   {
-    id: 'martial-arts',
-    label: 'MARTIAL ARTS',
-    title: 'Practice, Discipline & Awareness',
+    pillar: 'practice',
+    type: 'Book in Development',
+    status: 'In Development',
+    title: 'Martial Arts: Practice, Discipline & Awareness',
     description:
       'Training, movement, awareness, and the lessons martial arts carry far beyond the training floor.',
-    status: 'Book in development.',
   },
   {
-    id: 'kitchen',
-    label: 'COOKING & FOOD',
+    pillar: 'practice',
+    type: 'Cookbook in Development',
+    status: 'In Development',
     title: 'From the Kitchen',
     description:
       'Recipes, technique, family-food memories, and the practical lessons behind making something people want to eat again.',
-    status: 'Cookbook in development.',
   },
 ];
 
