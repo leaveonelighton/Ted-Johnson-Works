@@ -32,7 +32,7 @@
 
 .catalog-stack {
   display: grid;
-  gap: 54px;
+  gap: 64px;
 }
 
 .work-group {
@@ -84,6 +84,25 @@
   border-radius: var(--radius);
   background: linear-gradient(180deg,#fff 0%,var(--ivory) 100%);
   box-shadow: var(--shadow);
+}
+
+.work-card.featured {
+  border-color: rgba(212,175,55,.72);
+  color: white;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(244,197,66,.22), transparent 36%),
+    linear-gradient(145deg,#081229 0%,#13213f 100%);
+  box-shadow: 0 24px 58px rgba(8,18,41,.24);
+}
+
+.work-card.featured h4 {
+  color: white;
+  font-size: clamp(1.55rem,2.5vw,2rem);
+}
+
+.work-card.featured > p,
+.work-card.featured .work-type {
+  color: rgba(255,255,255,.82);
 }
 
 .work-card-topline {
@@ -141,17 +160,8 @@
   width: 100%;
 }
 
-.workbench-section {
-  background: var(--paper);
-}
-
-.shelf-grid.three {
-  grid-template-columns: repeat(3,minmax(0,1fr));
-}
-
 @media (max-width: 920px) {
-  .work-grid,
-  .shelf-grid.three {
+  .work-grid {
     grid-template-columns: 1fr;
   }
 
@@ -168,7 +178,7 @@
   }
 
   .category-nav a {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 100%;
     justify-content: center;
     text-align: center;
   }
