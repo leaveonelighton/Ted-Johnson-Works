@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Ted Johnson Works | Official Website of Theodore “Ted” Johnson',
-  description = 'The official digital home of Theodore “Ted” Johnson — author, technologist, teacher, builder, and lifelong student of practical work.',
+  description = 'The official digital home of Theodore “Ted” Johnson — author, technologist, teacher, photographer, builder, and lifelong student of practical work.',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -18,7 +18,7 @@ const personSchema = {
   name: 'Theodore Johnson',
   alternateName: 'Ted Johnson',
   url: 'https://tedjohnsonworks.com/',
-  jobTitle: ['Author', 'Technologist', 'Teacher'],
+  jobTitle: ['Author', 'Technologist', 'Teacher', 'Photographer'],
 };
 const websiteSchema = {
   '@context': 'https://schema.org',
