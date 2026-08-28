@@ -135,12 +135,16 @@ export const works = [
       'Bodybuilding, physical training, consistency, and lessons learned from decades of paying attention to the human body.',
   },
   {
+    id: 'vo-lam-original-vietnam-kung-fu',
     pillar: 'practice',
     type: 'Book in Development',
     status: 'In Development',
-    title: 'Martial Arts: Practice, Discipline & Awareness',
+    title: 'Vo Lam — Original Vietnam Kung Fu',
     description:
-      'Training, movement, awareness, and the lessons martial arts carry far beyond the training floor.',
+      'A developing book and story section about martial-arts practice, discipline, awareness, surviving equipment, and the lessons carried forward from Vo Lam.',
+    highlight: 'Archive Vo Lam images are serving as temporary visual anchors until new photographs of Ted’s original iron rings are added.',
+    primaryLabel: 'Explore the Vo Lam Project',
+    primaryUrl: '/martial-arts',
   },
   {
     pillar: 'practice',
