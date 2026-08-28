@@ -2,12 +2,12 @@ export const site = {
   name: 'Ted Johnson Works',
   domain: 'tedjohnsonworks.com',
   description:
-    'The official digital home of Theodore “Ted” Johnson — author, technologist, teacher, photographer, builder, and lifelong student of practical work.',
+    'The official digital home of Theodore “Ted” Johnson — author, technologist, teacher, builder, and lifelong student of practical work.',
   hero: {
     eyebrow: 'THEODORE “TED” JOHNSON',
-    title: 'A lifetime of work, stories, skills, images, and things worth sharing.',
+    title: 'A lifetime of work, stories, skills, and things worth sharing.',
     subtitle:
-      'Story & meaning. Technology, AI & learning. Photography & visual stories. Strength & practice. Different subjects, connected by one lifetime of learning by doing.',
+      'Story & meaning. Technology, AI & learning. Strength & practice. Different subjects, connected by one lifetime of learning by doing.',
   },
 };
 
@@ -25,13 +25,6 @@ export const pillars = [
     label: 'Technology, AI & Learning',
     description:
       'Practical technology, AI, teaching, and plain-English help built to make complicated things useful.',
-  },
-  {
-    id: 'photography',
-    eyebrow: 'LIGHT • PLACE • PEOPLE',
-    label: 'Photography & Visual Stories',
-    description:
-      'Photography built around real places, real people, useful details, and the moments that make a story visible.',
   },
   {
     id: 'practice',
@@ -123,40 +116,6 @@ export const works = [
     primaryUrl: 'https://payhip.com/b/W6nhP',
   },
   {
-    id: 'ted-johnson-photography',
-    pillar: 'photography',
-    type: 'Photography Portfolio',
-    status: 'Opening',
-    photoFocus: true,
-    title: 'Ted Johnson Photography',
-    description:
-      'A working portfolio of people, places, details, machines, landscapes, and everyday moments photographed with an eye for story.',
-    highlight: 'The photographs are Ted’s. The portfolio is being built from real work, not stock imagery.',
-    primaryLabel: 'Explore Photography',
-    primaryUrl: '/photography',
-  },
-  {
-    id: 'freedom-250',
-    pillar: 'photography',
-    type: '2026 Special Photography Series',
-    status: 'In Development',
-    title: 'Freedom 250: An American Year in Photographs',
-    description:
-      'An independent photography and storytelling project celebrating America’s 250th year through the people, places, work, freedom, and communities that make everyday life visible.',
-    highlight: 'A 250th-year celebration through Ted’s camera — grounded, human, and unmistakably American.',
-    primaryLabel: 'See the Freedom 250 Project',
-    primaryUrl: '/photography#freedom-250',
-  },
-  {
-    pillar: 'photography',
-    type: 'Prints / Licensing',
-    status: 'Coming Soon',
-    title: 'Selected Prints & Image Licensing',
-    description:
-      'Selected photographs will be prepared for prints, editorial use, and licensing as the portfolio is assembled.',
-    highlight: 'A future revenue lane built around original work rather than a generic image catalog.',
-  },
-  {
     pillar: 'practice',
     type: 'Book',
     status: 'Published',
@@ -200,5 +159,4 @@ export const articleIdeas = [
   'What Martial Arts Taught Me About Discipline',
   'Why Good Cooking Is Mostly About Process',
   'Payhip vs. Gumroad vs. Amazon for Independent Creators',
-  'What Makes a Photograph Worth Keeping',
 ];
