@@ -187,7 +187,7 @@ section { padding: 72px 0; }
 
 .cred-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   overflow: hidden;
   margin-top: 28px;
@@ -274,7 +274,7 @@ section { padding: 72px 0; }
   .hero-art { min-height: 280px; }
   .card-grid { grid-template-columns: 1fr; }
   .card-grid.two, .shelf-grid { grid-template-columns: 1fr; }
-  .cred-strip { grid-template-columns: repeat(2, 1fr); }
+  .cred-strip { grid-template-columns: 1fr; }
   .idea-list { grid-template-columns: 1fr; }
 }
 
@@ -293,5 +293,4 @@ section { padding: 72px 0; }
   .actions { flex-direction: column; }
   .button { width: 100%; }
   .card, .shelf { padding: 24px 20px; }
-  .cred-strip { grid-template-columns: 1fr; }
 }
