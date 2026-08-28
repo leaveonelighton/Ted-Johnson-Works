@@ -58,6 +58,18 @@ export const works = [
     primaryUrl: 'https://leaveonelighton.org',
   },
   {
+    id: 'build-it-in-one-day',
+    pillar: 'knowledge',
+    type: 'One-Day Production Guide',
+    status: 'Available',
+    title: 'BUILD IT IN ONE DAY',
+    description:
+      'Use AI to build the foundation, create something useful, and get more of your day back — a practical production system rather than a get-rich-in-a-day promise.',
+    highlight: 'America’s 250th Anniversary Freedom Edition · Includes the printable Action Pack · Launch price $7.76.',
+    primaryLabel: 'Get BUILD IT IN ONE DAY',
+    primaryUrl: 'https://payhip.com/b/xSaZe',
+  },
+  {
     pillar: 'knowledge',
     type: 'Guide',
     status: 'Available',
