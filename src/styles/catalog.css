@@ -13,6 +13,59 @@
   font-size: .94rem;
 }
 
+.freedom-250-section {
+  padding: 18px 0 28px;
+}
+
+.freedom-250-banner {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 30px 34px;
+  border: 1px solid rgba(212,175,55,.7);
+  border-radius: 22px;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.035) 0 32%, transparent 32% 66%, rgba(244,197,66,.05) 66%),
+    linear-gradient(135deg,#081229 0%,#13213f 100%);
+  box-shadow: 0 20px 48px rgba(8,18,41,.16);
+}
+
+.freedom-250-banner::before {
+  content: "250";
+  position: absolute;
+  right: 28px;
+  top: -34px;
+  color: rgba(244,197,66,.09);
+  font-size: clamp(7rem,18vw,13rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+
+.freedom-250-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.freedom-250-banner h2 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(1.8rem,3.2vw,3rem);
+  line-height: 1.08;
+  letter-spacing: -.03em;
+}
+
+.freedom-250-banner p:not(.eyebrow) {
+  max-width: 800px;
+  margin: 12px 0 0;
+  color: rgba(255,255,255,.82);
+}
+
 .category-nav {
   display: flex;
   flex-wrap: wrap;
@@ -139,6 +192,23 @@
   color: var(--navy);
 }
 
+.work-card.photo-focus {
+  border-color: rgba(212,175,55,.72);
+  border-top-color: var(--gold-bright);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(244,197,66,.23), transparent 33%),
+    linear-gradient(155deg,#fff 0%,#f5f0e2 100%);
+}
+
+.work-card.photo-focus h4 {
+  font-size: clamp(1.55rem,2.5vw,2rem);
+}
+
+.work-card.photo-focus .status-badge {
+  color: white;
+  background: var(--navy);
+}
+
 .work-card-topline {
   display: flex;
   align-items: center;
@@ -216,6 +286,14 @@
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
+  .freedom-250-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .freedom-250-banner .button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -228,6 +306,10 @@
     flex: 1 1 100%;
     justify-content: center;
     text-align: center;
+  }
+
+  .freedom-250-banner {
+    padding: 26px 22px;
   }
 
   .work-card {
