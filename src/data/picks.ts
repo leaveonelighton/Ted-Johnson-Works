@@ -10,6 +10,11 @@ export const pickCategories = [
     description: 'Useful services and tools for writing, publishing, websites, and independent work.',
   },
   {
+    id: 'photography',
+    label: 'Photography',
+    description: 'Cameras, lenses, lighting, carrying gear, printing tools, and photography resources that genuinely earn a place.',
+  },
+  {
     id: 'strength-training',
     label: 'Strength & Training',
     description: 'Training equipment, books, and practical gear that earn a recommendation.',
