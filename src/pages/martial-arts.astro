@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/martial-arts.css';
+
+const title = 'Vo Lam — Original Vietnam Kung Fu | Ted Johnson Works';
+const description = 'A developing Ted Johnson Works section about Vo Lam, Original Vietnam Kung Fu, martial arts practice, discipline, and the planned book.';
+
+const voLamArchive1 = 'data:image/jpeg;base64,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';
+
+const voLamArchive2 = 'data:image/jpeg;base64,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';
+---
+<BaseLayout title={title} description={description}>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Works</a>
+        <a href="/start">Start Here</a>
+        <a href="/photography">Life in Pictures</a>
+        <a href="/picks">Ted’s Picks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="martial-hero">
+      <div class="site-shell">
+        <div class="martial-hero-panel">
+          <div>
+            <p class="eyebrow">MARTIAL ARTS · WORK IN DEVELOPMENT</p>
+            <h1>Vo Lam — Original Vietnam Kung Fu</h1>
+            <p class="martial-dek">A developing book and story section about practice, discipline, awareness, and the Vo Lam material Ted has carried forward. The goal is to document the experience carefully, without pretending the book is finished before it is.</p>
+          </div>
+          <div class="martial-mark" aria-label="Vo Lam development mark"><span>VÕ LÂM</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="martial-section">
+      <div class="site-shell">
+        <div class="martial-intro">
+          <p class="eyebrow">ARCHIVE PLACEHOLDERS</p>
+          <h2>Use the real history while the new photography is coming.</h2>
+          <p>These two Vo Lam archive images are temporary visual anchors for the section. They keep the page connected to the actual martial-arts material while Ted prepares new photographs of the iron rings he still owns.</p>
+        </div>
+
+        <div class="vo-lam-grid">
+          <article class="vo-lam-card">
+            <img src={voLamArchive1} alt="Black-and-white Vo Lam archive image showing a martial artist wearing training rings." />
+            <div class="vo-lam-copy">
+              <h3>Vo Lam archive image</h3>
+              <p>A temporary historical placeholder tied directly to the material behind the developing book.</p>
+            </div>
+          </article>
+          <article class="vo-lam-card">
+            <img src={voLamArchive2} alt="Vo Lam archive image showing martial-arts training with iron rings." />
+            <div class="vo-lam-copy">
+              <h3>Iron-ring training</h3>
+              <p>This gives the future iron-ring photographs context. When Ted submits new photographs of his own rings, the new images can replace or sit beside this archive reference.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="placeholder-note"><strong>K.I.S. rule:</strong> these are placeholders, not a finished gallery. New original ring photographs come next; no AI recreation is needed when the real objects still exist.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="site-shell">
+        <article class="book-panel">
+          <p class="eyebrow">BOOK IN DEVELOPMENT</p>
+          <h2>Vo Lam — Original Vietnam Kung Fu</h2>
+          <p>The book can grow from lived practice, remembered lessons, surviving equipment, archive photographs, and careful explanation. It belongs under Strength & Practice, where it supports the larger story without overtaking the site.</p>
+          <p><strong>Next visual upgrade:</strong> Ted’s photographs of the original iron rings.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Martial-arts material in development.</p>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/photography">Life in Pictures</a>
+        <a href="#main">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
