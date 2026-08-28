@@ -68,6 +68,19 @@ export const works = [
     primaryUrl: 'https://payhip.com/b/mX6EL',
   },
   {
+    id: 'computer-skills-nobody-taught-you',
+    pillar: 'knowledge',
+    type: 'Book',
+    status: 'Published',
+    title: 'The Computer Skills Nobody Taught You',
+    description:
+      'A practical guide to the everyday computer skills people are often expected to know but were never clearly taught.',
+    highlight: 'Useful computer skills, explained in plain English.',
+    primaryLabel: 'Find on Amazon',
+    primaryUrl:
+      'https://www.amazon.com/s?k=The+Computer+Skills+Nobody+Taught+You+Theodore+Johnson',
+  },
+  {
     id: 'practical-ai',
     pillar: 'knowledge',
     type: 'AI Guide / Book',
