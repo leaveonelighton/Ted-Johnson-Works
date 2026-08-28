@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/article.css';
 
 const title = 'Start Here | Ted Johnson Works';
-const description = 'Choose the next practical step: direct technology help, everyday computer skills, practical AI, or curated recommendations.';
+const description = 'Choose the next practical step: direct technology help, everyday computer skills, practical AI, photography, or curated recommendations.';
 ---
 <BaseLayout title={title} description={description}>
   <header class="site-header">
@@ -12,6 +12,7 @@ const description = 'Choose the next practical step: direct technology help, eve
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="/">Works</a>
         <a href="/start" aria-current="page">Start Here</a>
+        <a href="/photography">Photography</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="/#articles">Stories & Articles</a>
       </nav>
@@ -60,6 +61,15 @@ const description = 'Choose the next practical step: direct technology help, eve
           </article>
 
           <article class="start-card">
+            <p class="eyebrow">PHOTOGRAPHY</p>
+            <h2>I want to see Ted’s photography and the Freedom 250 project.</h2>
+            <p>The photography portfolio is opening with original work, visual stories, and a special 2026 series celebrating America’s 250th year through everyday life.</p>
+            <div class="actions">
+              <a class="button button-gold" href="/photography">Explore Photography</a>
+            </div>
+          </article>
+
+          <article class="start-card">
             <p class="eyebrow">EVERYDAY TECHNOLOGY</p>
             <h2>I want to feel more confident with the technology I already use.</h2>
             <p>Everyday Tech Confidence is built for ordinary users who want practical steps without jargon or unnecessary complexity.</p>
@@ -86,6 +96,7 @@ const description = 'Choose the next practical step: direct technology help, eve
       <p>© {new Date().getFullYear()} Ted Johnson Works. Useful first. Commercial second.</p>
       <div class="footer-links">
         <a href="/">Home</a>
+        <a href="/photography">Photography</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="#main">Back to top</a>
       </div>
