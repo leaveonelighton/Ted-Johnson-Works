@@ -2,16 +2,40 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/photography.css';
 
-const title = 'Photography & Visual Stories | Ted Johnson Works';
-const description = 'A developing collection of original photography and visual stories by Theodore “Ted” Johnson, including the 2026 Freedom 250 project.';
+const title = 'Life in Pictures | Ted Johnson Works';
+const description = 'A living picture-story album from Theodore “Ted” Johnson — family, work, technology, places, machines, and memories from a life of learning by doing.';
 
-const portfolioAreas = [
-  ['People & Character', 'Portraits, expressions, work, and the human details that make a frame matter.'],
-  ['Places & Landscapes', 'Roads, towns, landscapes, architecture, weather, and the character of a place.'],
-  ['Work & Machines', 'Tools, technology, vehicles, workshops, hands at work, and the beauty of practical things.'],
-  ['Details & Texture', 'Small things most people pass by — light, texture, wear, shape, color, and evidence of use.'],
-  ['Everyday America', 'Ordinary scenes that say something about how people live, work, gather, travel, and belong.'],
-  ['Freedom 250', 'A 2026 special series built around America’s 250th year and photographed through Ted’s own lens.'],
+const storyChapters = [
+  {
+    kicker: 'CONTRACT TESTING YEARS',
+    title: 'Testing a world I could not read',
+    text: 'International software testing taught me to separate what I knew from what I assumed. When I could not read a language, I used the English version as a behavioral reference, watched structure and navigation, and learned that interface conventions can change across languages and reading directions.',
+    photo: 'International test-team and workstation photographs selected from the personal archive.',
+  },
+  {
+    kicker: 'FAMILY IN THE WORKSPACE',
+    title: 'When my work world and family world crossed',
+    text: 'Some of my favorite photographs are not polished corporate pictures. They are family memories made around CRT monitors, cables, equipment racks, temporary workstations, and the kind of makeshift test space that immediately dates the era.',
+    photo: 'Family-in-the-lab photographs selected from the personal archive. Public captions will stay personal and historical rather than identifying the workplace unnecessarily.',
+  },
+  {
+    kicker: 'THE TEAM',
+    title: 'A photograph everybody got to take home',
+    text: 'The old test-team photograph belongs here as memory, not as an endorsement. It records a group of people doing the work together during a very different technology era. The picture was distributed to the team, and my copy became part of my personal archive.',
+    photo: 'Group photograph selected. Coworkers will remain unnamed unless there is a good reason and permission to do otherwise.',
+  },
+  {
+    kicker: 'UNEXPECTED MOMENTS',
+    title: 'Then a Chinook shows up',
+    text: 'The archive also has the things no résumé would ever capture: a CH-47 Chinook on the grass, in the air, and close enough to turn an ordinary workday into a story worth keeping.',
+    photo: 'Four Chinook photographs are in the archive and ready for the visual pass.',
+  },
+  {
+    kicker: 'THE SMALL DETAILS',
+    title: 'A coffee cup can date a whole era',
+    text: 'The little details can be as useful as the big milestones. A coffee cup in a passenger seat, an old monitor, a badge, a desk, a cable bundle, or a building can instantly bring back what everyday life felt like before the world changed around it.',
+    photo: 'The passenger-seat Starbucks photograph is not in the current archive bundle. It gets added when it turns up — no substitute image and no fake reconstruction.',
+  },
 ];
 ---
 <BaseLayout title={title} description={description}>
@@ -21,7 +45,7 @@ const portfolioAreas = [
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="/">Works</a>
         <a href="/start">Start Here</a>
-        <a href="/photography" aria-current="page">Photography</a>
+        <a href="/photography" aria-current="page">Life in Pictures</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="/#articles">Stories & Articles</a>
       </nav>
@@ -33,39 +57,54 @@ const portfolioAreas = [
       <div class="site-shell">
         <div class="photo-hero-panel">
           <div>
-            <p class="eyebrow">DEVELOPING VISUAL WORK</p>
-            <h1>Light. Place. People. The moment that almost got away.</h1>
-            <p class="photo-dek">Photography is a growing creative lane inside Ted Johnson Works. This page is a place to develop the work from real photographs without turning it into a professional title before it has earned that role.</p>
+            <p class="eyebrow">A LIVING PICTURE STORY</p>
+            <h1>The photographs do not have to prove anything. They help tell the life.</h1>
+            <p class="photo-dek">This is not a claim to a photography career. It is a growing visual archive of family, work, technology, people, places, machines, and moments that make the written stories more real.</p>
             <div class="actions">
-              <a class="button button-gold" href="#portfolio">Explore the Developing Portfolio</a>
+              <a class="button button-gold" href="#album">Enter the Story Album</a>
               <a class="button button-light" href="#freedom-250">Freedom 250</a>
             </div>
           </div>
-          <div class="camera-mark" aria-label="Ted Johnson Works visual work monogram">
+          <div class="camera-mark" aria-label="Ted Johnson Works visual story monogram">
             <span aria-hidden="true">TJ</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
+    <section id="album" class="story-album-section">
       <div class="site-shell">
         <div class="photo-intro">
-          <p class="eyebrow">DEVELOPING PORTFOLIO</p>
-          <h2>Original photographs. No stock-photo wall.</h2>
-          <p>The structure is ready. Ted’s photographs will replace these portfolio markers as the first collection is selected, so the page grows from real work rather than filler.</p>
+          <p class="eyebrow">LIFE IN PICTURES</p>
+          <h2>Original photographs. Short stories. One life, still unfolding.</h2>
+          <p>The album is designed to grow one chapter at a time. The originals stay the evidence. Cropping, contrast correction, dust cleanup, or privacy blurring may be used when needed, but historical scenes will not be replaced with AI-generated lookalikes.</p>
         </div>
 
-        <div class="photo-grid" aria-label="Photography portfolio areas">
-          {portfolioAreas.map(([title, text]) => (
-            <article class="photo-slot">
-              <strong>{title}</strong>
-              <span>{text}</span>
-            </article>
-          ))}
+        <div class="album-shell" data-story-album>
+          <div class="album-track" tabindex="0" aria-label="Ted Johnson life story chapters">
+            {storyChapters.map((chapter, index) => (
+              <article class="album-slide" data-album-slide>
+                <div class="album-photo-placeholder" aria-label={`Archive photograph placeholder for ${chapter.title}`}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <strong>Original archive photograph</strong>
+                  <small>{chapter.photo}</small>
+                </div>
+                <div class="album-story">
+                  <p class="eyebrow">{chapter.kicker}</p>
+                  <h3>{chapter.title}</h3>
+                  <p>{chapter.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div class="album-controls">
+            <button type="button" class="album-button" data-album-prev aria-label="Previous story">← Previous</button>
+            <p class="album-status" aria-live="polite"><span data-album-current>1</span> / {storyChapters.length}</p>
+            <button type="button" class="album-button" data-album-next aria-label="Next story">Next →</button>
+          </div>
         </div>
 
-        <p class="photo-note"><strong>Coming next:</strong> selected photographs and short captions. Prints or licensing can be considered later if the work and audience justify it.</p>
+        <p class="photo-note"><strong>Archive rule:</strong> originals first. If a screen, sign, name, or other detail should not be public, the public copy can be cropped or blurred while the original remains untouched in the private archive.</p>
       </div>
     </section>
 
@@ -73,10 +112,9 @@ const portfolioAreas = [
       <div class="site-shell">
         <div>
           <p class="eyebrow">2026 · AMERICA’S 250TH YEAR</p>
-          <h2>Freedom 250: An American Year in Photographs</h2>
-          <p>This independent Ted Johnson Works project celebrates America’s 250th year through everyday life: people at work, main streets, open roads, neighborhoods, tools, gatherings, landscapes, flags, weather, machines, quiet moments, and the freedom to build a life.</p>
-          <p>The goal is not staged patriotism. It is a photographic record of the country as Ted encounters it — grounded, human, sometimes imperfect, and worth seeing.</p>
-          <p><strong>Possible future forms:</strong> a curated online collection, selected prints, a photo essay, or a digital edition — only as the body of work develops.</p>
+          <h2>Freedom 250: the next chapter, photographed in the present.</h2>
+          <p>The historic album looks backward. Freedom 250 can look outward now: everyday people, work, roads, towns, tools, gatherings, machines, landscapes, and the freedom to build a life.</p>
+          <p>That keeps the 250th material connected to the same idea without turning the main site into a patriotic theme park: real life, real photographs, short stories, and useful context.</p>
         </div>
         <div class="freedom-number" aria-hidden="true">250</div>
       </div>
@@ -85,19 +123,9 @@ const portfolioAreas = [
     <section class="photo-business">
       <div class="site-shell">
         <div class="photo-intro">
-          <p class="eyebrow">FUTURE POSSIBILITIES</p>
-          <h2>Let the work earn the next step.</h2>
-          <p>For now, the priority is the portfolio. Commercial options stay secondary until there is enough original work and audience interest to justify them.</p>
-        </div>
-        <div class="business-grid">
-          <article class="business-card">
-            <h3>Selected Prints</h3>
-            <p>A future option for photographs that prove strong enough to stand on their own.</p>
-          </article>
-          <article class="business-card">
-            <h3>Image Licensing</h3>
-            <p>A future option for images with useful editorial or commercial subject matter, if demand develops.</p>
-          </article>
+          <p class="eyebrow">K.I.S.</p>
+          <h2>Story first. Everything else can earn its way in later.</h2>
+          <p>If the visual work eventually creates demand for prints, licensing, or a dedicated portfolio, those options can grow naturally. For now this page has one job: help the photographs tell the story.</p>
         </div>
       </div>
     </section>
@@ -105,7 +133,7 @@ const portfolioAreas = [
 
   <footer class="site-footer">
     <div class="site-shell footer-row">
-      <p>© {new Date().getFullYear()} Ted Johnson Works. Developing visual work by Theodore “Ted” Johnson.</p>
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Personal visual archive and stories by Theodore “Ted” Johnson.</p>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/start">Start Here</a>
@@ -114,4 +142,39 @@ const portfolioAreas = [
       </div>
     </div>
   </footer>
+
+  <script is:inline>
+    (() => {
+      const album = document.querySelector('[data-story-album]');
+      if (!album) return;
+      const track = album.querySelector('.album-track');
+      const slides = [...album.querySelectorAll('[data-album-slide]')];
+      const current = album.querySelector('[data-album-current]');
+      const prev = album.querySelector('[data-album-prev]');
+      const next = album.querySelector('[data-album-next]');
+      if (!track || !slides.length || !current || !prev || !next) return;
+
+      const activeIndex = () => {
+        const left = track.scrollLeft;
+        let best = 0;
+        let distance = Infinity;
+        slides.forEach((slide, index) => {
+          const d = Math.abs(slide.offsetLeft - left);
+          if (d < distance) { distance = d; best = index; }
+        });
+        return best;
+      };
+
+      const go = (index) => {
+        const target = slides[Math.max(0, Math.min(index, slides.length - 1))];
+        target?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      };
+
+      prev.addEventListener('click', () => go(activeIndex() - 1));
+      next.addEventListener('click', () => go(activeIndex() + 1));
+      track.addEventListener('scroll', () => {
+        window.requestAnimationFrame(() => { current.textContent = String(activeIndex() + 1); });
+      }, { passive: true });
+    })();
+  </script>
 </BaseLayout>
