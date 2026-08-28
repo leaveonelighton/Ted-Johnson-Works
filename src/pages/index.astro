@@ -26,6 +26,7 @@ const publishedArticles = [
         <a href="/start">Start Here</a>
         <a href="#work">Works</a>
         <a href="#practical-ai">Practical AI</a>
+        <a href="/photography">Photography</a>
         <a href="#articles">Stories & Articles</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Book Site</a>
@@ -51,13 +52,27 @@ const publishedArticles = [
           <div class="hero-art" aria-label="Ted Johnson Works monogram">
             <div class="hero-orbit" aria-hidden="true"></div>
             <div class="hero-monogram" aria-hidden="true">TJ</div>
-            <p class="hero-caption">Author · Technologist · Teacher · Builder</p>
+            <p class="hero-caption">Author · Technologist · Teacher · Photographer · Builder</p>
           </div>
         </div>
         <div class="cred-strip" aria-label="Ted Johnson background">
           <div><strong>Story & Meaning</strong><span>Books, lived experience, hope and practical compassion</span></div>
           <div><strong>Technology, AI & Learning</strong><span>Plain-English tools, teaching, practical AI and direct help</span></div>
+          <div><strong>Photography & Visual Stories</strong><span>People, places, details and moments seen through Ted’s camera</span></div>
           <div><strong>Strength & Practice</strong><span>Stewardship, training, discipline, martial arts and food</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="freedom-250-section" aria-labelledby="freedom-250-home-title">
+      <div class="site-shell">
+        <div class="freedom-250-banner">
+          <div>
+            <p class="eyebrow">2026 · AMERICA’S 250TH YEAR</p>
+            <h2 id="freedom-250-home-title">Freedom 250: an American year worth seeing.</h2>
+            <p>An independent Ted Johnson Works photography and storytelling special — everyday people, places, work, freedom, and community through Ted’s camera.</p>
+          </div>
+          <a class="button button-gold" href="/photography#freedom-250">Explore Freedom 250</a>
         </div>
       </div>
     </section>
@@ -67,7 +82,7 @@ const publishedArticles = [
         <div class="section-head">
           <p class="eyebrow">TED JOHNSON WORKS</p>
           <h2>Explore the Work</h2>
-          <p>Three areas organize the subjects. The labels on each card tell you what form the work takes — book, guide, service, movement, or project.</p>
+          <p>Four areas organize the subjects. The labels on each card tell you what form the work takes — book, guide, service, photography, movement, or project.</p>
         </div>
 
         <nav class="category-nav" aria-label="Work areas">
@@ -93,7 +108,7 @@ const publishedArticles = [
                   {pillarWorks.map((item) => (
                     <article
                       id={item.id}
-                      class:list={["work-card", { featured: item.featured, "ai-focus": item.aiFocus }]}
+                      class:list={["work-card", { featured: item.featured, "ai-focus": item.aiFocus, "photo-focus": item.photoFocus }]}
                     >
                       <div class="work-card-topline">
                         <span class="status-badge">{item.status}</span>
@@ -126,8 +141,8 @@ const publishedArticles = [
       <div class="site-shell">
         <div class="section-head">
           <p class="eyebrow">STORIES & ARTICLES</p>
-          <h2>Useful ideas connect the three areas.</h2>
-          <p>Practical articles can bring readers in through a specific question, then lead them naturally to a book, guide, service, or recommendation when it actually fits.</p>
+          <h2>Useful ideas connect the four areas.</h2>
+          <p>Practical articles can bring readers in through a specific question, then lead them naturally to a book, guide, service, photograph, or recommendation when it actually fits.</p>
         </div>
         <ul class="idea-list">
           {publishedArticles.map((article) => (
@@ -142,7 +157,7 @@ const publishedArticles = [
         <div class="section-head">
           <p class="eyebrow">TED’S PICKS</p>
           <h2>Buy less. Choose better.</h2>
-          <p>A separate recommendation board for tools, books, training gear, kitchen equipment, and other things that have earned a place — kept apart from the main body of work.</p>
+          <p>A separate recommendation board for tools, books, photography gear, training gear, kitchen equipment, and other things that have earned a place — kept apart from the main body of work.</p>
         </div>
         <div class="card-grid two">
           <article class="card">
@@ -168,6 +183,7 @@ const publishedArticles = [
       <p>© {new Date().getFullYear()} Ted Johnson Works. Built to grow with the work.</p>
       <div class="footer-links">
         <a href="/start">Start Here</a>
+        <a href="/photography">Photography</a>
         <a href="/picks">Ted’s Picks</a>
         <a href="https://thelightinthewindowbook.com" target="_blank" rel="noopener">The Light in the Window</a>
         <a href="https://leaveonelighton.org" target="_blank" rel="noopener">Leave One Light On</a>
