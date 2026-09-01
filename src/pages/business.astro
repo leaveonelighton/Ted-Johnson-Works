@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/business.css';
 
+const checkupFormUrl = 'https://app.notion.com/p/298e3967a90240efb9d5b441737d6ba7?pvs=106';
+
 const checklist = [
   'Can customers find the business easily and see accurate hours, phone, address, and website?',
   'Does the website make sense on a phone?',
@@ -40,8 +42,8 @@ const checklist = [
           <p class="business-lede">I help small businesses find technology that may be wasting time, frustrating customers, or making work harder than it needs to be.</p>
           <p class="trust-line"><strong>I don't sell technology for the sake of technology. I help people solve problems.</strong></p>
           <div class="actions">
-            <a class="button button-gold" href="#checkup">Start With the Checkup</a>
-            <a class="button button-light" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Message Ted</a>
+            <a class="button button-gold" href={checkupFormUrl} target="_blank" rel="noopener">Start My Technology Checkup</a>
+            <a class="button button-light" href="#checkup">See What's Included</a>
           </div>
         </div>
       </div>
@@ -49,7 +51,7 @@ const checklist = [
 
     <section class="business-intro">
       <div class="site-shell narrow-shell">
-        <p class="eyebrow">K.I.S.S.</p>
+        <p class="eyebrow">KEEP IT SIMPLE.</p>
         <h2>Technology should make a small business easier to run — not give the owner another job.</h2>
         <p>Technology changes quickly. Your business does not need to chase every trend, but it does need to know what matters. The goal is simple: identify the biggest friction, rank the best next steps, and leave the owner with a practical plan.</p>
         <div class="principles">
@@ -75,7 +77,7 @@ const checklist = [
           <p class="tag">PILOT OFFER</p>
           <h3>$149 Small Business Technology Checkup</h3>
           <p>About 60–90 minutes to review the current setup, identify 3–5 practical priorities, and provide a concise written action plan. Implementation is separate and only happens with the owner's approval.</p>
-          <a class="button button-gold" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Ask Ted About the Pilot</a>
+          <a class="button button-gold" href={checkupFormUrl} target="_blank" rel="noopener">Start My Technology Checkup</a>
         </div>
       </div>
     </section>
@@ -133,7 +135,7 @@ const checklist = [
       <div class="site-shell narrow-shell">
         <h2>Do you have a need?</h2>
         <p>Tell me the one technology-related thing in your business that drives you crazy.</p>
-        <a class="button button-gold" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Start the Conversation</a>
+        <a class="button button-gold" href={checkupFormUrl} target="_blank" rel="noopener">Start My Technology Checkup</a>
       </div>
     </section>
   </main>
