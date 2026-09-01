@@ -128,6 +128,19 @@ export const works = [
     primaryUrl: 'https://payhip.com/b/W6nhP',
   },
   {
+    id: 'small-business-technology-checkup',
+    pillar: 'knowledge',
+    type: 'Small Business Service',
+    status: 'Pilot',
+    featured: true,
+    title: 'Small Business Technology Checkup',
+    description:
+      'A plain-English review of the technology around a small business — website, customer flow, Google presence, accounts, repetitive work, security basics, branding consistency, and practical AI opportunities.',
+    highlight: 'This is who I am. This is what I do. Do you have a need?',
+    primaryLabel: 'Explore the Small Business Checkup',
+    primaryUrl: '/business',
+  },
+  {
     pillar: 'practice',
     type: 'Book',
     status: 'Published',
