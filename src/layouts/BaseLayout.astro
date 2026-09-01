@@ -50,6 +50,13 @@ const websiteSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
   </head>
   <body>
+    <a class="business-open-strip" href="/business" aria-label="Open for small business technology checkups">
+      <span class="business-open-dot" aria-hidden="true"></span>
+      <span class="business-open-primary">OPEN FOR SMALL BUSINESS</span>
+      <span class="business-open-separator" aria-hidden="true">—</span>
+      <span class="business-open-secondary">Technology Checkups</span>
+      <span class="business-open-arrow" aria-hidden="true">→</span>
+    </a>
     <a class="skip-link" href="#main">Skip to main content</a>
     <slot />
   </body>
