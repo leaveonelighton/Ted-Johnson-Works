@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/business.css';
+
+const checklist = [
+  'Can customers find the business easily and see accurate hours, phone, address, and website?',
+  'Does the website make sense on a phone?',
+  'Can customers quickly understand what the business offers and what to do next?',
+  'Are calls, forms, booking, ordering, and payment paths working without unnecessary friction?',
+  'Do Google, social profiles, website, logo, photos, and messaging look like the same business?',
+  'Are important accounts protected and ownership of domains, websites, and key logins understood?',
+  'Could the business recover important files, contacts, and website access after a failure?',
+  'Is the business paying for overlapping or unused technology?',
+  'Are employees repeating work that software or automation could simplify?',
+  'Is AI being used deliberately, ignored completely, or purchased without a clear need?',
+];
+---
+<BaseLayout
+  title="Small Business Technology Checkup | Ted Johnson Works"
+  description="A plain-English technology checkup for small businesses: find the friction, prioritize what matters, and improve only what earns its keep."
+>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="#checkup">The Checkup</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about-ted">Why Ted?</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="business-hero">
+      <div class="site-shell">
+        <div class="business-hero-panel">
+          <p class="eyebrow">PRACTICAL TECHNOLOGY FOR SMALL BUSINESS</p>
+          <h1>This is who I am.<br />This is what I do.<br /><span>Do you have a need?</span></h1>
+          <p class="business-lede">I help small businesses find technology that may be wasting time, frustrating customers, or making work harder than it needs to be.</p>
+          <p class="trust-line"><strong>I don't sell technology for the sake of technology. I help people solve problems.</strong></p>
+          <div class="actions">
+            <a class="button button-gold" href="#checkup">Start With the Checkup</a>
+            <a class="button button-light" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Message Ted</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-intro">
+      <div class="site-shell narrow-shell">
+        <p class="eyebrow">K.I.S.S.</p>
+        <h2>Technology should make a small business easier to run — not give the owner another job.</h2>
+        <p>Technology changes quickly. Your business does not need to chase every trend, but it does need to know what matters. The goal is simple: identify the biggest friction, rank the best next steps, and leave the owner with a practical plan.</p>
+        <div class="principles">
+          <div><strong>Listen first.</strong><span>Start with the owner's real need.</span></div>
+          <div><strong>Diagnose second.</strong><span>Look for the smallest useful improvement.</span></div>
+          <div><strong>Recommend third.</strong><span>Fix Now. Improve Next. Nice to Have.</span></div>
+          <div><strong>Sell last.</strong><span>Trust before implementation.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkup" class="dark-section">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">SMALL BUSINESS TECHNOLOGY CHECKUP</p>
+          <h2>Ten questions. Then the top three priorities.</h2>
+          <p>No 40-page disaster report. No forced AI. No surprise changes.</p>
+        </div>
+        <ol class="checklist-grid">
+          {checklist.map((item) => <li>{item}</li>)}
+        </ol>
+        <div class="pilot-card">
+          <p class="tag">PILOT OFFER</p>
+          <h3>$149 Small Business Technology Checkup</h3>
+          <p>About 60–90 minutes to review the current setup, identify 3–5 practical priorities, and provide a concise written action plan. Implementation is separate and only happens with the owner's approval.</p>
+          <a class="button button-gold" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Ask Ted About the Pilot</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>One customer. One need. One useful next step.</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="card"><p class="tag">1</p><h3>Tell me what is harder than it should be.</h3><p>Website, booking, payments, customer follow-up, Google presence, accounts, repetitive work, AI, or something else.</p></article>
+          <article class="card"><p class="tag">2</p><h3>I review the system around the problem.</h3><p>I look at what is already in place before recommending another tool, subscription, platform, or piece of software.</p></article>
+          <article class="card"><p class="tag">3</p><h3>You get the priorities.</h3><p>Fix Now. Improve Next. Nice to Have. You can make the changes yourself or ask for a separate implementation quote.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-section">
+      <div class="site-shell narrow-shell">
+        <p class="eyebrow">TIRED OF HEARING ABOUT AI?</p>
+        <h2>Good. AI is not the product.</h2>
+        <p class="big-copy"><strong>A better-running business is the product.</strong></p>
+        <p>If AI can solve a real problem, I will show you where it may fit. If it cannot, I will not recommend it. The point is not to buy AI. The point is to understand enough to make an informed decision.</p>
+        <p class="wave-line">Don't miss this technology wave just because you missed the first one.</p>
+      </div>
+    </section>
+
+    <section id="about-ted">
+      <div class="site-shell">
+        <div class="about-panel">
+          <div>
+            <p class="eyebrow">WHY TED?</p>
+            <h2>Plain English. Practical judgment. No technology theater.</h2>
+          </div>
+          <div>
+            <p>Ted Johnson brings decades of hands-on experience across technology testing, support, teaching, troubleshooting, and practical end-user technology. The approach is deliberately simple: understand the need, explain the problem clearly, recommend what is useful, and leave the owner with a clear next step.</p>
+            <p><strong>Under-promise. Over-deliver. Build trust first.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="remote-section">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">REMOTE WHEN POSSIBLE. LOCAL WHEN NEEDED.</p>
+          <h2>Central brain. Local hands.</h2>
+          <p>Many reviews and improvements can be handled remotely. When a job truly needs someone on site, qualified local technical help can be scoped separately for the physical work. The goal is to solve the business problem while creating useful work, not unnecessary complexity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="site-shell narrow-shell">
+        <h2>Do you have a need?</h2>
+        <p>Tell me the one technology-related thing in your business that drives you crazy.</p>
+        <a class="button button-gold" href="https://www.linkedin.com/in/theodore-johnson-8a2518292/" target="_blank" rel="noopener">Start the Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Practical technology for real work.</p>
+      <div class="footer-links"><a href="/">Home</a><a href="#main">Back to top</a></div>
+    </div>
+  </footer>
+</BaseLayout>
