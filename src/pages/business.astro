@@ -29,7 +29,7 @@ const checklist = [
         <a href="/">Home</a>
         <a href="/triage">Technology Triage</a>
         <a href="#checkup">The Checkup</a>
-        <a href="#how-it-works">How It Works</a>
+        <a href="#service-standard">Service Standard</a>
         <a href="#about-ted">Why Ted?</a>
       </nav>
     </div>
@@ -77,9 +77,10 @@ const checklist = [
           {checklist.map((item) => <li>{item}</li>)}
         </ol>
         <div class="pilot-card">
-          <p class="tag">PILOT OFFER</p>
+          <p class="tag">LAUNCH OFFER</p>
           <h3>$149 Small Business Technology Checkup</h3>
           <p>About 60–90 minutes to review the current setup, identify 3–5 practical priorities, and provide a concise written action plan. Implementation is separate and only happens with the owner's approval.</p>
+          <p><strong>Submitting the intake does not charge you or reserve a paid appointment.</strong> I review the need and confirm a service slot before sending payment information.</p>
           <a class="button button-gold" href="#start-checkup">Start My Technology Checkup</a>
         </div>
       </div>
@@ -90,7 +91,8 @@ const checklist = [
         <div class="section-head form-section-head">
           <p class="eyebrow">START WITH THE NEED</p>
           <h2>Tell me what is harder than it should be.</h2>
-          <p>Complete the short intake below. I will review what you send and follow up about the Small Business Technology Checkup.</p>
+          <p>Complete the short intake below. I review each request before recommending or charging for a Checkup.</p>
+          <p><strong>What to expect:</strong> I normally review new requests within 2 business days. If the Checkup is a good fit and capacity is available, I will send scheduling and payment information. If the current queue is full, I will offer a waitlist instead of taking payment for work I cannot deliver promptly.</p>
         </div>
         <div class="checkup-form-frame">
           <iframe
@@ -104,6 +106,27 @@ const checklist = [
           ></iframe>
         </div>
         <p class="form-fallback">If the form does not load on your device, <a href={checkupFormUrl} target="_blank" rel="noopener">open the intake form in a new tab</a>.</p>
+      </div>
+    </section>
+
+    <section id="service-standard">
+      <div class="site-shell">
+        <div class="section-head">
+          <p class="eyebrow">TJW SERVICE STANDARD</p>
+          <h2>Capacity before cash.</h2>
+          <p>A paid customer should know what happens next. I deliberately limit the launch queue so service quality does not collapse if demand arrives faster than expected.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="card"><p class="tag">1</p><h3>Review before payment.</h3><p>New requests are normally reviewed within 2 business days. Payment is requested only after fit and capacity are confirmed.</p></article>
+          <article class="card"><p class="tag">2</p><h3>Schedule after payment.</h3><p>A Checkup appointment is normally offered within 5 business days after payment. The Checkup itself is approximately 60–90 minutes.</p></article>
+          <article class="card"><p class="tag">3</p><h3>Written plan after the Checkup.</h3><p>The Fix Now / Improve Next / Nice to Have action plan is normally delivered within 2 business days, with one brief clarification follow-up included for 7 days.</p></article>
+        </div>
+        <div class="pilot-card">
+          <p class="tag">LAUNCH CAPACITY</p>
+          <h3>No more than 5 paid Checkups per week.</h3>
+          <p>I also keep no more than 5 active paid Checkups in the delivery queue at one time. If demand exceeds that capacity, qualified requests can wait for the next available slot without being charged first.</p>
+          <p><strong>This is not 24/7 or emergency IT support.</strong> If I cannot meet a promised paid-service window, I will contact the client promptly and offer a revised mutually agreed date or a full refund.</p>
+        </div>
       </div>
     </section>
 
@@ -140,6 +163,7 @@ const checklist = [
           </div>
           <div>
             <p>Ted Johnson brings decades of hands-on experience across technology testing, support, teaching, troubleshooting, and practical end-user technology. The approach is deliberately simple: understand the need, explain the problem clearly, recommend what is useful, and leave the owner with a clear next step.</p>
+            <p><strong>Tester. Troubleshooter. Problem Solver.</strong></p>
             <p><strong>Under-promise. Over-deliver. Build trust first.</strong></p>
           </div>
         </div>
