@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/business.css';
+
+const clarityCallUrl = 'https://payhip.com/b/W6nhP';
+const checkupUrl = '/business#start-checkup';
+---
+<BaseLayout
+  title="Technology Triage | Ted Johnson Works"
+  description="A simple first-pass technology triage tool from Ted Johnson Works: identify the kind of problem, get one useful next step, and decide whether you need more help."
+>
+  <header class="site-header">
+    <div class="site-shell nav">
+      <a class="brand" href="/">TED JOHNSON <span>WORKS</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/business">Business Checkup</a>
+        <a href="#triage">Technology Triage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="triage-hero">
+      <div class="site-shell narrow-shell">
+        <p class="eyebrow">TECHNOLOGY TRIAGE — BETA</p>
+        <h1>What is harder than it should be?</h1>
+        <p class="triage-lede">Start with the problem, not the product. Answer a few simple questions and get one plain-English next step.</p>
+        <p class="trust-note"><strong>No account changes. No downloads. No purchases. No AI hype.</strong> This prototype only helps you decide what to look at next.</p>
+      </div>
+    </section>
+
+    <section id="triage" class="triage-section">
+      <div class="site-shell narrow-shell">
+        <form id="triage-form" class="triage-card">
+          <fieldset>
+            <legend>1. What kind of problem are you dealing with?</legend>
+            <label><input type="radio" name="category" value="internet" required /> Internet, Wi-Fi, device, or hardware</label>
+            <label><input type="radio" name="category" value="account" /> Login, account, password, or subscription</label>
+            <label><input type="radio" name="category" value="customer" /> Website, contact, booking, payment, or customer flow</label>
+            <label><input type="radio" name="category" value="software" /> Software, AI, automation, or repetitive work</label>
+            <label><input type="radio" name="category" value="unsure" /> I am not sure what kind of problem it is</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Who is the problem affecting?</legend>
+            <label><input type="radio" name="context" value="personal" required /> Me / my household</label>
+            <label><input type="radio" name="context" value="business" /> My business, customers, employees, or property</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. What best describes it right now?</legend>
+            <label><input type="radio" name="urgency" value="blocked" required /> Something important is blocked right now</label>
+            <label><input type="radio" name="urgency" value="recurring" /> It keeps happening or keeps wasting time</label>
+            <label><input type="radio" name="urgency" value="planning" /> Nothing is broken; I want to improve or simplify it</label>
+          </fieldset>
+
+          <button class="button button-gold triage-submit" type="submit">Show My Next Step</button>
+          <p class="triage-privacy">Your answers stay in this browser. This V1 prototype does not send them to a server.</p>
+        </form>
+
+        <section id="triage-result" class="triage-result" aria-live="polite" hidden>
+          <p class="eyebrow">YOUR NEXT STEP</p>
+          <h2 id="result-title"></h2>
+          <p id="result-body"></p>
+          <div id="result-checks" class="result-checks"></div>
+          <div class="result-actions">
+            <a id="primary-action" class="button button-gold" href="#"></a>
+            <a class="button button-light" href="/business">See the Small Business Checkup</a>
+          </div>
+          <p class="result-boundary">This is triage, not a diagnosis. Do not make destructive account, billing, security, or hardware changes based only on this screen.</p>
+          <button id="start-over" class="text-button" type="button">Start over</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="triage-why">
+      <div class="site-shell narrow-shell">
+        <p class="eyebrow">WHY THIS EXISTS</p>
+        <h2>Tester. Troubleshooter. Problem Solver.</h2>
+        <p>Most people do not need another list of products. They need help separating symptoms from causes and deciding what deserves attention first. Ted Johnson Works starts there.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <p>© {new Date().getFullYear()} Ted Johnson Works. Practical technology for real work.</p>
+      <div class="footer-links"><a href="/">Home</a><a href="#main">Back to top</a></div>
+    </div>
+  </footer>
+
+  <script define:vars={{ clarityCallUrl, checkupUrl }}>
+    const form = document.getElementById('triage-form');
+    const result = document.getElementById('triage-result');
+    const title = document.getElementById('result-title');
+    const body = document.getElementById('result-body');
+    const checks = document.getElementById('result-checks');
+    const primary = document.getElementById('primary-action');
+    const startOver = document.getElementById('start-over');
+
+    const guidance = {
+      internet: {
+        title: 'Isolate the connection before buying anything.',
+        body: 'Treat this as an evidence problem first. Determine whether the failure affects one device or several, whether wired and wireless behave differently, and whether restarting equipment only restores service temporarily.',
+        checks: ['One device or every device?', 'Wi-Fi only, or wired too?', 'Does a restart fix it only temporarily?', 'Did hardware, cabling, power, or provider equipment recently change?'],
+      },
+      account: {
+        title: 'Map the account before changing the account.',
+        body: 'Do not create another profile just because sign-in is confusing. First identify the real account, recovery email or phone, connected profiles, subscription owner, and what would be lost if the wrong account were removed.',
+        checks: ['Which account is the keeper?', 'What email or phone recovers it?', 'Are duplicate profiles actually duplicates?', 'Is billing tied to the same identity?'],
+      },
+      customer: {
+        title: 'Test the customer path from the outside.',
+        body: 'Pretend you are a first-time customer. Search for the business, open the site on a phone, find the offer, try the contact or booking path, and identify the first place where confidence or momentum breaks.',
+        checks: ['Can a customer find you?', 'Can they understand the offer?', 'Can they reach you?', 'Can they buy, book, or take the next step?'],
+      },
+      software: {
+        title: 'Define the repeated task before adding another tool.',
+        body: 'Write down the work that repeats, what triggers it, what information goes in, and what a good result looks like. Then decide whether the smallest fix is a setting, template, automation, AI assist, or simply removing a redundant step.',
+        checks: ['What repeats?', 'How often?', 'What information is copied or re-entered?', 'What would a successful shortcut save?'],
+      },
+      unsure: {
+        title: 'Start with the symptom and one recent change.',
+        body: 'Describe what stopped working, when it started, what still works, and what changed around the same time. That is usually enough to choose the first branch of troubleshooting without guessing.',
+        checks: ['What exactly is failing?', 'When did it begin?', 'What still works normally?', 'What changed shortly before it started?'],
+      },
+    };
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const category = data.get('category');
+      const context = data.get('context');
+      const urgency = data.get('urgency');
+      const item = guidance[category] || guidance.unsure;
+
+      title.textContent = item.title;
+      body.textContent = item.body;
+      checks.innerHTML = '<strong>Check these first:</strong><ul>' + item.checks.map((entry) => `<li>${entry}</li>`).join('') + '</ul>';
+
+      if (context === 'business' && (urgency === 'blocked' || urgency === 'recurring')) {
+        primary.textContent = 'Start the $149 Business Checkup';
+        primary.href = checkupUrl;
+      } else {
+        primary.textContent = 'Get a $35 Clarity Call';
+        primary.href = clarityCallUrl;
+      }
+
+      result.hidden = false;
+      result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    startOver?.addEventListener('click', () => {
+      form?.reset();
+      result.hidden = true;
+      form?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .triage-hero {
+    padding: 5rem 0 3rem;
+    background: linear-gradient(180deg, #0b1724 0%, #12283c 100%);
+    color: white;
+  }
+
+  .triage-hero h1 {
+    margin: .4rem 0 1rem;
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    line-height: .98;
+  }
+
+  .triage-lede {
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    max-width: 760px;
+  }
+
+  .trust-note {
+    margin-top: 1.5rem;
+    color: #dce8f3;
+  }
+
+  .triage-section {
+    padding: 3rem 0 4rem;
+    background: #f4f7f9;
+  }
+
+  .triage-card,
+  .triage-result {
+    background: white;
+    border: 1px solid #d8e0e6;
+    border-radius: 18px;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    box-shadow: 0 18px 50px rgba(11, 23, 36, .08);
+  }
+
+  .triage-card fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  .triage-card legend {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+  }
+
+  .triage-card label {
+    display: flex;
+    gap: .7rem;
+    align-items: flex-start;
+    padding: .7rem 0;
+    font-size: 1.05rem;
+    cursor: pointer;
+  }
+
+  .triage-card input {
+    margin-top: .25rem;
+    transform: scale(1.15);
+  }
+
+  .triage-submit {
+    border: 0;
+    cursor: pointer;
+  }
+
+  .triage-privacy,
+  .result-boundary {
+    color: #5d6974;
+    font-size: .92rem;
+    margin-top: 1rem;
+  }
+
+  .triage-result {
+    margin-top: 2rem;
+    border-top: 6px solid #c99b3b;
+  }
+
+  .triage-result h2 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    margin: .35rem 0 1rem;
+  }
+
+  .result-checks {
+    margin: 1.4rem 0;
+    padding: 1rem 1.2rem;
+    background: #f4f7f9;
+    border-radius: 12px;
+  }
+
+  .result-checks ul {
+    margin: .6rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: .8rem;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+  }
+
+  .text-button {
+    border: 0;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: .75rem 0 0;
+    font: inherit;
+  }
+
+  .triage-why {
+    padding: 4rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .triage-hero {
+      padding-top: 3.5rem;
+    }
+
+    .result-actions .button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
