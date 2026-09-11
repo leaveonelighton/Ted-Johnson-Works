@@ -1,56 +1,16 @@
-# Ted Johnson Works
+# Ted Johnson Works website
 
-Official website and digital hub for Ted Johnson Works.
+This repository is the authoritative, deployment-ready website for `tedjohnsonworks.com`.
 
-## Purpose
+The files in the repository root are the finished static site. Deploy `main` directly to the website document root; no build command is required.
 
-TedJohnsonWorks.com is the personal and commercial hub for Theodore “Ted” Johnson. It is intentionally separate from Leave One Light On and from the dedicated *The Light in the Window* book site.
+## Host-only files
 
-The site is designed to grow across Ted's body of work: books, technology and AI, strength and bodybuilding, martial arts, cooking, stories, practical guides, and carefully disclosed recommendations.
+The post-payment intake form submits to `/submit-checkup.php`. That handler and its private SMTP/environment configuration must remain on Hostinger and must never be committed to this public repository.
 
-## Stack
+## Deployment boundary
 
-- Astro static site generation
-- Lexend-first readable typography
-- Responsive navy / ivory / gold design system
-- Structured content in `src/data/site.ts`
-- SEO canonical metadata, Person + WebSite structured data, robots.txt and sitemap.xml
-- GitHub Actions build verification on every push and pull request
+- Deploy the repository root to `public_html`.
+- Preserve the Hostinger-managed `submit-checkup.php` handler and its private configuration.
+- Do not commit passwords, API keys, SMTP credentials, payment secrets, backups, or exported customer data.
 
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Production build:
-
-```bash
-npm run build
-```
-
-Astro writes the static site to `dist/`.
-
-## Content workflow
-
-Most homepage offerings and future shelves are defined in `src/data/site.ts`. Updating that structured data updates the generated site without hand-editing repeated cards.
-
-## Deployment target
-
-Primary domain: `https://tedjohnsonworks.com`
-
-Source of truth: the `main` branch of this GitHub repository.
-
-GitHub Actions automatically builds `main` and force-publishes only the compiled static output to the `hostinger` branch. Hostinger should deploy that branch directly to the website root.
-
-Recommended Hostinger Git settings:
-
-- Repository: `leaveonelighton/Ted-Johnson-Works`
-- Branch: `hostinger`
-- Root directory: `public_html`
-- Auto-deployment: enabled
-
-Do not connect Hostinger directly to `main` for this static deployment path; `main` contains Astro source code while `hostinger` contains the production-ready HTML/CSS/assets.
-
-Do not place Hostinger credentials or deployment secrets in repository files.
