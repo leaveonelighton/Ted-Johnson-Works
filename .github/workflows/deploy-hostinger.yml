@@ -1,0 +1,52 @@
+name: Publish approved site to Hostinger branch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout approved main branch
+        uses: actions/checkout@v4
+
+      - name: Prepare and validate production files
+        shell: bash
+        run: |
+          set -euo pipefail
+          deploy_dir="$(mktemp -d)"
+          rsync -a             --exclude='.git/'             --exclude='.github/'             --exclude='.gitignore'             --exclude='README.md'             ./ "$deploy_dir/"
+
+          test -f "$deploy_dir/index.html"
+          test -f "$deploy_dir/picks.html"
+          test -f "$deploy_dir/submit-checkup.php"
+          test -d "$deploy_dir/lib/phpmailer"
+          grep -Fq 'You May Not Need More Muscle' "$deploy_dir/index.html"
+          grep -Fq 'Buy the Paperback' "$deploy_dir/index.html"
+          grep -Fq 'Get the Kindle Edition' "$deploy_dir/index.html"
+          grep -Fq 'As an Amazon Associate I earn from qualifying purchases.' "$deploy_dir/picks.html"
+
+          echo "DEPLOY_DIR=$deploy_dir" >> "$GITHUB_ENV"
+
+      - name: Publish production files to hostinger branch
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd "$DEPLOY_DIR"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy approved main ${GITHUB_SHA}"
+          git push --force             "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"             HEAD:hostinger
