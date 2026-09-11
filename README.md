@@ -6,11 +6,10 @@ The files in the repository root are the finished static site. Deploy `main` dir
 
 ## Host-only files
 
-The post-payment intake form submits to `/submit-checkup.php`. That handler and its private SMTP/environment configuration must remain on Hostinger and must never be committed to this public repository.
+The post-payment intake form submits to `/submit-checkup.php`. The handler and PHPMailer runtime are versioned here. Its private SMTP password configuration must remain on Hostinger outside `public_html` and must never be committed.
 
 ## Deployment boundary
 
 - Deploy the repository root to `public_html`.
-- Preserve the Hostinger-managed `submit-checkup.php` handler and its private configuration.
+- Preserve `~/domains/tedjohnsonworks.com/.tjw-private/mail-config.php` on Hostinger. It sits one level above `public_html`, outside the Git deployment target.
 - Do not commit passwords, API keys, SMTP credentials, payment secrets, backups, or exported customer data.
-
