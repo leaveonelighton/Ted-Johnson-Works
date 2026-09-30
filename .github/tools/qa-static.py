@@ -15,6 +15,8 @@ errors = []
 references = 0
 fields = []
 external = set()
+config = json.loads((root / '.github/tools/offers.json').read_text())
+verification = json.loads((root / '.github/review/checkout-verification.json').read_text())
 for path in root.rglob('*.html'):
     soup = BeautifulSoup(path.read_text(), 'html.parser')
     for identifier, count in Counter(el['id'] for el in soup.select('[id]')).items():
@@ -40,6 +42,27 @@ for path in root.rglob('*.html'):
     for element in soup.select('[data-offer][data-field]'):
         fields.append({'file':path.relative_to(root).as_posix(), 'offer':element['data-offer'],
                        'field':element['data-field'], 'value':element.get('href') if element['data-field']=='checkout' else element.get_text()})
+    launch_labels = soup.select('[data-field="label"]')
+    if launch_labels:
+        for element in soup.select('[data-offer][data-field]'):
+            name, field = element['data-offer'], element['data-field']
+            evidence, expected = verification[name], config['planned'][name]
+            if (evidence.get('verified') is not True or evidence.get('live_mode') is not True
+                    or evidence.get('currency') != 'usd'
+                    or evidence.get('amount_minor') != expected['amount_minor']):
+                errors.append(f'{path.name}: {name} launch pricing lacks matching live checkout verification')
+            if field == 'checkout':
+                if element.get('href') != evidence.get('url'):
+                    errors.append(f'{path.name}: {name} button does not match verified checkout URL')
+            elif element.get_text() != expected[field]:
+                errors.append(f'{path.name}: incorrect approved {name} {field}')
+        for price in soup.select('[data-field="price"]'):
+            name = price['data-offer']
+            block = price.find_parent(['p', 'h3'])
+            if not block.select_one(f'[data-offer="{name}"][data-field="label"]'):
+                errors.append(f'{path.name}: {name} launch label absent')
+            if not block.find_next_sibling(attrs={'data-offer': name, 'data-field': 'regular_price'}):
+                errors.append(f'{path.name}: {name} regular price absent')
     # Catch the old triage prices, even when embedded inside JavaScript.
     if '$35' in path.read_text():
         errors.append(f'{path.name}: obsolete $35 price')

@@ -1,0 +1,20 @@
+{
+  "clarity": {
+    "verified": false,
+    "live_mode": null,
+    "url": null,
+    "currency": null,
+    "amount_minor": null,
+    "verified_at": null,
+    "status": "Pending Payhip merchant access and creation of a separate $19.99 / 15–30-minute offer. Preserve the regular $39 / 30-minute offer."
+  },
+  "checkup": {
+    "verified": false,
+    "live_mode": null,
+    "url": null,
+    "currency": null,
+    "amount_minor": null,
+    "verified_at": null,
+    "status": "Stripe installation confirmed, but payment tools are not exposed in this session. New $99 checkout has not been created or verified."
+  }
+}
