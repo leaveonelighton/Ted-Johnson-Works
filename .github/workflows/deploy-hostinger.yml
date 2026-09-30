@@ -24,15 +24,21 @@ jobs:
         run: |
           set -euo pipefail
           deploy_dir="$(mktemp -d)"
-          rsync -a             --exclude='.git/'             --exclude='.github/'             --exclude='.gitignore'             --exclude='README.md'             ./ "$deploy_dir/"
+          rsync -a             --exclude='.git/'             --exclude='.github/'             --exclude='.gitignore'             --exclude='README.md'             --exclude='.tjw-private/'             --exclude='.env'             --exclude='.env.*'             ./ "$deploy_dir/"
 
+          if find "$deploy_dir" \( -name '.tjw-private' -o -name '.env' -o -name '.env.*' \) -print -quit | grep -q .; then
+            echo "Private configuration found in deployment" >&2
+            exit 1
+          fi
+          test -f "$deploy_dir/contract-it.html"
+          test -f "$deploy_dir/business.html"
           test -f "$deploy_dir/index.html"
           test -f "$deploy_dir/picks.html"
           test -f "$deploy_dir/submit-checkup.php"
           test -d "$deploy_dir/lib/phpmailer"
-          grep -Fq 'You May Not Need More Muscle' "$deploy_dir/index.html"
-          grep -Fq 'Buy the Paperback' "$deploy_dir/index.html"
-          grep -Fq 'Get the Kindle Edition' "$deploy_dir/index.html"
+          grep -Fq 'You May Not Need More Muscle' "$deploy_dir/body-works.html"
+          grep -Fq 'Buy the Paperback' "$deploy_dir/body-works.html"
+          grep -Fq 'Get the Kindle Edition' "$deploy_dir/body-works.html"
           grep -Fq 'As an Amazon Associate I earn from qualifying purchases.' "$deploy_dir/picks.html"
 
           echo "DEPLOY_DIR=$deploy_dir" >> "$GITHUB_ENV"

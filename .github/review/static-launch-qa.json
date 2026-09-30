@@ -1,0 +1,206 @@
+{
+  "html_pages": 19,
+  "internal_references": 503,
+  "external_link_destinations": 25,
+  "offer_fields": [
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$19.99"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "regular_price",
+      "value": "Regular $39"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "15\u201330 minutes"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/order?link=FrA7a&pricing_plan=PjWlK0XkGv"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$19.99"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "regular_price",
+      "value": "Regular $39"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "15\u201330 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/order?link=FrA7a&pricing_plan=PjWlK0XkGv"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$99"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "regular_price",
+      "value": "Regular $149"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "Up to 60 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$99"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "regular_price",
+      "value": "Regular $149"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "Up to 60 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "Up to 60 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$19.99"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "regular_price",
+      "value": "Regular $39"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "15\u201330 minutes"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/order?link=FrA7a&pricing_plan=PjWlK0XkGv"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "label",
+      "value": "Website Launch Rate \u2014"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$99"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "regular_price",
+      "value": "Regular $149"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "Up to 60 minutes"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01"
+    }
+  ],
+  "errors": []
+}
