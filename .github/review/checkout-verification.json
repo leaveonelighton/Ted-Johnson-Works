@@ -1,12 +1,14 @@
 {
   "clarity": {
-    "verified": false,
-    "live_mode": null,
-    "url": null,
-    "currency": null,
-    "amount_minor": null,
-    "verified_at": null,
-    "status": "Pending Payhip merchant access and creation of a separate $19.99 / 15–30-minute offer. Preserve the regular $39 / 30-minute offer."
+    "verified": true,
+    "live_mode": true,
+    "url": "https://payhip.com/order?link=FrA7a&pricing_plan=PjWlK0XkGv",
+    "currency": "usd",
+    "amount_minor": 1999,
+    "verified_at": "2026-09-30T20:53:46.250Z",
+    "product_id": "FrA7a",
+    "plan_id": "PjWlK0XkGv",
+    "status": "Actual live Payhip checkout observed: $19.99 base and $19.99 total, United States/Texas (public test ZIP 76033). Seller session; guest checkout and completed payment not tested. UK location showed $4 tax/$23.99 total before switching country. No tax settings changed. Original W6nhP $39/30-minute plan preserved."
   },
   "checkup": {
     "verified": false,
