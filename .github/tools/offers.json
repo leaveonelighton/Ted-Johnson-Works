@@ -1,0 +1,24 @@
+{
+  "current": {
+    "clarity": {
+      "price": "$39",
+      "duration": "30 minutes",
+      "checkout": "https://payhip.com/b/W6nhP"
+    },
+    "checkup": {
+      "price": "$149",
+      "duration": "About 60\u201390 minutes",
+      "checkout": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    }
+  },
+  "planned": {
+    "clarity": {
+      "price": "$19.99",
+      "duration": "15\u201330 minutes"
+    },
+    "checkup": {
+      "price": "$99",
+      "duration": "Up to 60 minutes"
+    }
+  }
+}

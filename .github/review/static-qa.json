@@ -1,0 +1,134 @@
+{
+  "html_pages": 19,
+  "internal_references": 503,
+  "external_link_destinations": 25,
+  "offer_fields": [
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$39"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "30 minutes"
+    },
+    {
+      "file": "quick-tech-help.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/b/W6nhP"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$39"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "30 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/b/W6nhP"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$149"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "About 60\u201390 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$149"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "About 60\u201390 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "About 60\u201390 minutes"
+    },
+    {
+      "file": "business.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "price",
+      "value": "$39"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "duration",
+      "value": "30 minutes"
+    },
+    {
+      "file": "index.html",
+      "offer": "clarity",
+      "field": "checkout",
+      "value": "https://payhip.com/b/W6nhP"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "price",
+      "value": "$149"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "duration",
+      "value": "About 60\u201390 minutes"
+    },
+    {
+      "file": "index.html",
+      "offer": "checkup",
+      "field": "checkout",
+      "value": "https://buy.stripe.com/cNiaEY2Hw7gGfCK2cH8Zq00"
+    }
+  ],
+  "errors": []
+}
