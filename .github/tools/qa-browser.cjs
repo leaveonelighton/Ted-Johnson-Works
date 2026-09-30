@@ -53,6 +53,37 @@ server.listen(8767, '127.0.0.1', async () => {
         assert(layout.h1Count === 1, `One main heading: ${file} at ${width}px`);
       }
     }
+    // Click every local checkout CTA, intercepting navigation before any live request.
+    const offers = JSON.parse(fs.readFileSync(path.join(root,'.github/tools/offers.json'))).planned;
+    const evidence = JSON.parse(fs.readFileSync(path.join(review,'checkout-verification.json')));
+    if (fs.readFileSync(path.join(root,'index.html'),'utf8').includes('data-field="label"')) {
+      for (const file of ['index.html','business.html','quick-tech-help.html']) {
+        await page.goto('http://127.0.0.1:8767/'+file, {waitUntil:'domcontentloaded'});
+        const amounts = page.locator('[data-field="price"]');
+        for (let i=0; i<await amounts.count(); i++) {
+          const amount = amounts.nth(i);
+          const name = await amount.getAttribute('data-offer');
+          assert(await amount.isVisible() && await amount.innerText() === offers[name].price, `Visible launch amount ${file}/${name}`);
+          assert(await page.locator(`[data-offer="${name}"][data-field="regular_price"]`).first().isVisible(), `Visible regular price ${file}/${name}`);
+        }
+        const count = await page.locator('[data-field="checkout"]').count();
+        for (let i=0; i<count; i++) {
+          await page.goto('http://127.0.0.1:8767/'+file, {waitUntil:'domcontentloaded'});
+          const button = page.locator('[data-field="checkout"]').nth(i);
+          const name = await button.getAttribute('data-offer');
+          const expected = evidence[name].url;
+          let clickedUrl;
+          await page.route(expected, async route => {
+            clickedUrl = route.request().url();
+            await route.fulfill({status:200,contentType:'text/html',body:'<p>Checkout navigation intercepted for QA.</p>'});
+          });
+          await button.click();
+          await page.waitForURL(expected);
+          assert(clickedUrl === expected, `Checkout CTA ${file}/${i} opens verified ${name} URL`);
+          await page.unroute(expected);
+        }
+      }
+    }
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('http://127.0.0.1:8767/index.html', { waitUntil: 'domcontentloaded' });
     await page.screenshot({ path: path.join(review,'home-mobile.png'), fullPage: true });

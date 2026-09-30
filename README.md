@@ -8,7 +8,9 @@ The files in the repository root are the finished static site; no build command 
 
 The technology-led redesign is prepared on `redesign/technology-paid-work-2026-09-30`. See [the review report](.github/review/REDESIGN-REVIEW.md) for pages, pricing inventory, QA, and publishing decisions. Review screenshots and machine-readable QA are in `.github/review/`; that directory is excluded from production deployment.
 
-Current $39 / $149 checkout copy remains aligned with unchanged payment destinations. The proposed $19.99 / $99 offers and revised durations are staged in `.github/tools/offers.json`. After authorized payment updates, `.github/tools/activate-offers.py` renders verified offer details into static pages. This is a maintenance step, not a hosting build dependency. `.github/tools/qa-static.py` checks references, disclosures, offer fields, and deployment boundaries.
+The approved website launch offers are active on the review branch: Technology Clarity Call $19.99 / 15–30 minutes (Regular $39), and Small Business Technology Checkup $99 / up to 60 minutes with concise written priorities (Regular $149). Both live checkout amounts were verified before activation. Contract IT remains quote-based. See [the launch completion report](.github/review/LAUNCH-IMPLEMENTATION.md) for exact checkout links, product changes, QA, and remaining manual checks. Publication is not authorized.
+
+`.github/tools/activate-offers.py` requires fresh matching checkout evidence before changing price copy. `.github/tools/qa-static.py` checks references, disclosures, offer fields, and deployment boundaries; `.github/tools/qa-browser.cjs` checks responsive layouts, navigation, forms, triage, and checkout-button navigation.
 
 ## Host-only files
 

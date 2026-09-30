@@ -11,12 +11,15 @@
     "status": "Actual live Payhip checkout observed: $19.99 base and $19.99 total, United States/Texas (public test ZIP 76033). Seller session; guest checkout and completed payment not tested. UK location showed $4 tax/$23.99 total before switching country. No tax settings changed. Original W6nhP $39/30-minute plan preserved."
   },
   "checkup": {
-    "verified": false,
-    "live_mode": null,
-    "url": null,
-    "currency": null,
-    "amount_minor": null,
-    "verified_at": null,
-    "status": "Stripe installation confirmed, but payment tools are not exposed in this session. New $99 checkout has not been created or verified."
+    "verified": true,
+    "live_mode": true,
+    "url": "https://buy.stripe.com/4gM5kE5TI6cC4Y67x18Zq01",
+    "currency": "usd",
+    "amount_minor": 9900,
+    "verified_at": "2026-09-30T21:11:18.477Z",
+    "product_id": "prod_VMD9ASffqIZCfM",
+    "payment_link_id": "plink_1ULUlrLjkDWvpCdxt02ukQ4q",
+    "after_payment_url": "https://tedjohnsonworks.com/business.html#start-checkup",
+    "status": "Actual active live Stripe checkout observed at USD $99.00, up to 60 minutes, concise written priorities. Copied product/link preserve original $149 destination. Removed inherited $149 graphic from copy only. Automatic tax, customer-name/phone collection, payment methods, and account settings unchanged. No payment submitted; redirect verified in link settings and destination intake inspected separately."
   }
 }
