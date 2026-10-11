@@ -90,3 +90,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
  .brand{font-size:.93rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+
+/* Visible teaching experience in the technology homepage hero. */
+.mentor-note{max-width:780px;margin:28px 0 0;padding:18px 20px;border-left:3px solid var(--gold-bright);background:#ffffff0e;border-radius:0 12px 12px 0;color:#fff;font-size:1rem;line-height:1.7}
+.mentor-note a{display:block;padding:8px 0;min-height:44px;color:#f4c542;text-decoration:underline;text-underline-offset:4px}
