@@ -1,0 +1,28 @@
+# Approved historical page moves only. Existing query strings are retained.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^photography/?$ https://tedjohnsonworks.com/photography.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^start$ https://tedjohnsonworks.com/start.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^articles/how-i-built-ted-johnson-works/?$ https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^articles/ai-for-people-who-dont-want-to-become-ai-experts/?$ https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^articles/how-i-use-payhip-to-sell-practical-guides/?$ https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^business/?$ https://tedjohnsonworks.com/business.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tedjohnsonworks\.com$ [NC]
+RewriteRule ^picks/$ https://tedjohnsonworks.com/picks.html [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.tedjohnsonworks\.com$ [NC]
+RewriteRule ^picks/?$ https://tedjohnsonworks.com/picks.html [R=301,L]
+</IfModule>
