@@ -102,3 +102,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .gift-status{margin-top:24px}
 #website-services .card ul,#holiday-gifts .card ul{padding-left:1.25rem}
 #website-services .card li,#holiday-gifts .card li{margin:.6rem 0}
+
+/* Readable disclosures beside the existing Food Works grinder recommendations. */
+.food-affiliate-disclosure{max-width:780px;margin:20px 0 0;color:#fff;font-size:max(16px,1rem);line-height:1.7}
+#thermomaven-grinders .paid-link-note,#ebaco-grinders .paid-link-note{font-size:max(16px,1rem);line-height:1.6;color:#505866}
+.picks-hero .disclosure-box{font-size:max(16px,1rem)}
