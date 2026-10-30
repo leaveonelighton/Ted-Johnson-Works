@@ -94,3 +94,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 /* Visible teaching experience in the technology homepage hero. */
 .mentor-note{max-width:780px;margin:28px 0 0;padding:18px 20px;border-left:3px solid var(--gold-bright);background:#ffffff0e;border-radius:0 12px 12px 0;color:#fff;font-size:1rem;line-height:1.7}
 .mentor-note a{display:block;padding:8px 0;min-height:44px;color:#f4c542;text-decoration:underline;text-underline-offset:4px}
+
+/* Preserve catalog typography after correcting the heading hierarchy. */
+.work-card h3{margin:0;color:var(--navy);font-size:clamp(1.35rem,2.2vw,1.72rem);line-height:1.16;letter-spacing:-.02em}
+.work-card.featured h3{color:#fff;font-size:clamp(1.55rem,2.5vw,2rem)}
+.work-card.ai-focus h3{font-size:clamp(1.5rem,2.4vw,1.9rem)}
+.gift-status{margin-top:24px}
+#website-services .card ul,#holiday-gifts .card ul{padding-left:1.25rem}
+#website-services .card li,#holiday-gifts .card li{margin:.6rem 0}
