@@ -29,3 +29,11 @@
   });
   window.matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
 })();
+
+// Load the shared, TJW-only analytics code on pages using the site navigation.
+(() => {
+  const tracker = document.createElement('script');
+  tracker.src = 'assets/metricool-tracker.js';
+  tracker.async = true;
+  document.head.appendChild(tracker);
+})();
