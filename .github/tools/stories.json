@@ -1,0 +1,82 @@
+[
+  {
+    "path": "cheese-moved-so-did-ted.html",
+    "title": "Who Moved My Cheese? What Every Generation Should Know About Retirement",
+    "description": "Why older Americans are returning to work, what younger workers can learn about retirement preparedness, and Ted Johnson's next chapter. Sourced to AARP, BLS and Federal Reserve research.",
+    "category": "Ted's Stories",
+    "date": "2026-11-21",
+    "date_evidence": "Visible byline: By Ted Johnson · November 21, 2026. Exact first-live time is unverified; RSS pubDate is omitted rather than inventing a time."
+  },
+  {
+    "path": "articles/moving-at-the-freeze-of-business.html",
+    "title": "Moving at the FREEZE of Business",
+    "description": "Why security delays protect bank accounts, and why secure account recovery should still respect people.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/is-your-face-the-new-password.html",
+    "title": "Is Your Face the New Password?",
+    "description": "An accessible look at face recognition, passkeys, bodily change, and the human right to secure account recovery.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/how-many-passwords-does-one-human-need.html",
+    "title": "How Many Passwords Does One Human Need?",
+    "description": "A practical, research-backed guide to password overload, password managers, passkeys, and account recovery.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/life-savings-gone-identity-monitoring-subscription.html",
+    "title": "Life Savings Gone. Here's Your Identity Monitoring Subscription.",
+    "description": "Evidence on elder fraud, monitoring limits, real-time intervention, and what to do immediately after a scam.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/ai-for-people-who-dont-want-to-become-ai-experts.html",
+    "title": "AI for People Who Don’t Want to Become AI Experts",
+    "description": "A plain-English approach to using AI for useful everyday work without hype, jargon, or pretending the tool is always right.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/how-i-built-ted-johnson-works.html",
+    "title": "How I Built TedJohnsonWorks.com Without Hiring an Agency",
+    "description": "A practical look at the stack and decisions behind TedJohnsonWorks.com: ChatGPT, GitHub, Astro, GitHub Actions, and Hostinger.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/how-i-keep-tedjohnsonworks-running.html",
+    "title": "How I Keep TedJohnsonWorks.com Running Without Babysitting It",
+    "description": "How Ted Johnson keeps TedJohnsonWorks.com running with one source of truth, an automated GitHub deployment path, and Hostinger publishing the approved production branch.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/how-i-use-payhip-to-sell-practical-guides.html",
+    "title": "How I Use Payhip to Sell Practical Guides",
+    "description": "A practical look at using Payhip for digital guides and direct services without building a full ecommerce system from scratch.",
+    "category": "Tech Works",
+    "date": null,
+    "date_evidence": null
+  },
+  {
+    "path": "articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html",
+    "title": "Working Under Chef Al Hynes at the Belleview-Biltmore",
+    "description": "Ted Johnson remembers learning pastry and hotel-kitchen discipline under Chef Al Hynes at Florida's Belleview-Biltmore, including one unusual day serving Secret Service personnel during the George H. W. Bush vice-presidential years.",
+    "category": "Food Works",
+    "date": null,
+    "date_evidence": null
+  }
+]

@@ -1,0 +1,399 @@
+{
+  "source_checks": {
+    "assertions": 683,
+    "structured_data_blocks": 17,
+    "local_references": 352,
+    "protected_files": 64,
+    "feed_items": 10,
+    "errors": []
+  },
+  "rss_reader": {
+    "parser": "feedparser",
+    "version": "rss20",
+    "bozo": false,
+    "items": 10
+  },
+  "browser": {
+    "surface": "Cloud Chrome; local static preview; genuine browser checks",
+    "desktop": {
+      "client_width": 1348,
+      "scroll_width": 1348
+    },
+    "responsive_method": "Same-origin test-only HTML iframes with explicit 340, 375 and 768 CSS-pixel widths; test harness excluded from PR. Scrollbars take 15 pixels from usable document width. No browser device emulation or physical-device testing.",
+    "responsive": [
+      {
+        "frame_width": 340,
+        "client_width": 325,
+        "scroll_width": 325,
+        "article_listings": 10,
+        "menu_open_close": true,
+        "more_works_keyboard_enter_escape": true
+      },
+      {
+        "frame_width": 375,
+        "client_width": 360,
+        "scroll_width": 360,
+        "article_listings": 10,
+        "menu_open_close": true,
+        "more_works_keyboard_enter_escape": true
+      },
+      {
+        "frame_width": 768,
+        "client_width": 753,
+        "scroll_width": 753,
+        "article_listings": 10,
+        "menu_open_close": true,
+        "more_works_keyboard_enter_escape": true
+      }
+    ],
+    "visual_review": "Screenshots inspected for desktop, 340-pixel hero and article list, 375-pixel hero, and 768-pixel hero/topic links.",
+    "navigation": [
+      "Homepage to Stories",
+      "Stories to Learn’n as We Go and back",
+      "340-pixel topic link scroll to Tech Works",
+      "340-pixel Food Works article and return to Stories",
+      "Desktop More Works Enter/Escape",
+      "RSS link opens browser XML tree"
+    ],
+    "homepage_images_loaded": 4,
+    "article_and_hub_images": 0,
+    "business_transactions": "Not submitted; source preservation only"
+  },
+  "existing_static_qa": {
+    "before_errors": 26,
+    "after_errors": 26,
+    "identical_errors": true,
+    "reason": "Historical promotional-price and checkout expectations in existing offers fixtures; no new reference errors."
+  },
+  "production": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "ed0406a430256aea0d3c85c712cd46fbd581382a52c3c64bcdbae2d5d69d2c8f",
+      "x_robots": null,
+      "title": "Contract IT & Website Help in Cleburne | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/"
+      ],
+      "robots": [],
+      "images": [
+        {
+          "src": "assets/books/build-it-in-one-day.jpg",
+          "alt": "BUILD IT IN ONE DAY cover"
+        },
+        {
+          "src": "assets/books/the-everyday-ai-companion.jpg",
+          "alt": "The Everyday AI Companion cover"
+        },
+        {
+          "src": "assets/books/no-nonsense-home-tech-checklist.jpg",
+          "alt": "The No-Nonsense Home Technology Checklist cover"
+        },
+        {
+          "src": "assets/books/computer-skills-nobody-taught-you.jpg",
+          "alt": "The Computer Skills Nobody Taught You cover"
+        }
+      ]
+    },
+    {
+      "path": "stories.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/stories.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "b646d56a2909ded841b62e3dfd19a564ee720a9093e968bfef300c3999ce967c",
+      "x_robots": null,
+      "title": "Ted Johnson Stories | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/stories.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "learnn-as-we-go.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/learnn-as-we-go.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "67290b309a9866aae34cbc535526cd5bc780ab6050ec0a6d181b84b1c94306fe",
+      "x_robots": null,
+      "title": "Learn’n as We Go | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/learnn-as-we-go.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "cheese-moved-so-did-ted.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/cheese-moved-so-did-ted.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "e8e6496b972679d307684501f3bacbe9a991d0ab8b4bedd4da93fbc21a9d5ef2",
+      "x_robots": null,
+      "title": "Who Moved My Cheese? Retirement, Work and What Younger Generations Can Learn | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/cheese-moved-so-did-ted.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/sitemap.xml",
+      "type": "application/xml",
+      "matches_main": true,
+      "sha256": "7cbe3b0871b00a420da62f7f092f859e60d995161b5b1fa36ece0faa739cf2c6",
+      "x_robots": null
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/robots.txt",
+      "type": "text/plain",
+      "matches_main": true,
+      "sha256": "6307447417e76d21b8ea90eea641164b53fd1b754826d81c0c0a50c5674a3735",
+      "x_robots": null
+    },
+    {
+      "path": "feed.xml",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "assets/nav.js",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/assets/nav.js",
+      "type": "application/x-javascript",
+      "matches_main": true,
+      "sha256": "124336fd7c97dfc4c4b5dc1e43fbc5dbf1436dcbf8a94b093a36023e0b2afd29",
+      "x_robots": null
+    },
+    {
+      "path": "assets/metricool-tracker.js",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/assets/metricool-tracker.js",
+      "type": "application/x-javascript",
+      "matches_main": true,
+      "sha256": "c0c92e0acca4818006c8aac4f405e458a10de87302aa02f39960d983dfd495cc",
+      "x_robots": null
+    },
+    {
+      "path": "articles/moving-at-the-freeze-of-business.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "a702226ba58cdda9a7bc8ed4c7dde126916e1044795a4d7d875fd51774761d61",
+      "x_robots": null,
+      "title": "Moving at the FREEZE of Business | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/how-i-built-ted-johnson-works.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "2f9e4863c1a44e425232e2f025e53a874bfa4e2762d550a5700fd34ed0ca27c4",
+      "x_robots": null,
+      "title": "How I Built TedJohnsonWorks.com Without Hiring an Agency | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/how-i-keep-tedjohnsonworks-running.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "a9d5ca5a4c897ee705c050765b02bd14fbde499c5423ac00c59477e431750a1b",
+      "x_robots": null,
+      "title": "How I Keep TedJohnsonWorks.com Running Without Babysitting It | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/is-your-face-the-new-password.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "3d4fa22b832443db8e736417600b2e9021d13255a81f3111179c67249b36ae76",
+      "x_robots": null,
+      "title": "Is Your Face the New Password? | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "b6fee9147185aa2cb00ae81e673d5ce016b02d4e22bab9d5bec07b888557f957",
+      "x_robots": null,
+      "title": "Working Under Chef Al Hynes at the Belleview-Biltmore | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/how-many-passwords-does-one-human-need.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "3380417b19d3dc4cfd2755f6d3949434f08fcf1a831f79392efa59f953da7edd",
+      "x_robots": null,
+      "title": "How Many Passwords Does One Human Need? | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/life-savings-gone-identity-monitoring-subscription.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "7746fc03fe621386d0c99a8f510bbf212e2fa8d0c1be4c221dee9f36fd68b822",
+      "x_robots": null,
+      "title": "Life Savings Gone. Here's Your Identity Monitoring Subscription. | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/ai-for-people-who-dont-want-to-become-ai-experts.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "3f9124973b0e8965062f4cef499f52a714eb4f9558239082b8997e184c8ce430",
+      "x_robots": null,
+      "title": "AI for People Who Don’t Want to Become AI Experts | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html"
+      ],
+      "robots": [],
+      "images": []
+    },
+    {
+      "path": "articles/how-i-use-payhip-to-sell-practical-guides.html",
+      "status": 200,
+      "url": "https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html",
+      "type": "text/html",
+      "matches_main": true,
+      "sha256": "d49eda6883c36773885db9b959838776a12219229fb9046180bcbe423031efbb",
+      "x_robots": null,
+      "title": "How I Use Payhip to Sell Practical Guides | Ted Johnson Works",
+      "canonical": [
+        "https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html"
+      ],
+      "robots": [],
+      "images": []
+    }
+  ],
+  "live_link_checks": [
+    {
+      "url": "https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/assets/metricool-tracker.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/cheese-moved-so-did-ted.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/cheese-moved-so-did-ted.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/feed.xml",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/learnn-as-we-go.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/learnn-as-we-go.html"
+    },
+    {
+      "url": "https://tedjohnsonworks.com/stories.html",
+      "status": 200,
+      "resolved": "https://tedjohnsonworks.com/stories.html"
+    }
+  ],
+  "unverified": [
+    "Published feed HTTP response and MIME type",
+    "External W3C validation of published feed",
+    "Metricool RSS acceptance and date handling",
+    "All physical devices and assistive technologies",
+    "Live payments, forms, affiliate destinations, and purchases"
+  ]
+}
