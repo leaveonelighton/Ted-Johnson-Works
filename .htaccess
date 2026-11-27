@@ -6,7 +6,7 @@ RewriteCond %{HTTP_HOST} ^(?:www\.)?tedjohnsonworks\.com$ [NC]
 RewriteRule ^photography/?$ https://tedjohnsonworks.com/photography.html [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^(?:www\.)?tedjohnsonworks\.com$ [NC]
-RewriteRule ^start$ https://tedjohnsonworks.com/start.html [R=301,L]
+RewriteRule ^start/?$ https://tedjohnsonworks.com/start.html [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^(?:www\.)?tedjohnsonworks\.com$ [NC]
 RewriteRule ^articles/how-i-built-ted-johnson-works/?$ https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html [R=301,L]

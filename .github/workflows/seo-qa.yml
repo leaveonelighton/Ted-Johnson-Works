@@ -1,0 +1,17 @@
+name: SEO discovery checks
+on:
+  pull_request:
+    paths:
+      - '**/*.html'
+      - '*.html'
+      - sitemap.xml
+      - .github/tools/qa-seo.py
+      - .github/workflows/seo-qa.yml
+permissions:
+  contents: read
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/tools/qa-seo.py
