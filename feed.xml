@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Ted’s Stories | Ted Johnson Works</title>
+    <link>https://tedjohnsonworks.com/stories.html</link>
+    <description>Practical articles, personal stories, and lessons from Ted Johnson’s work and life.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Nov 2026 00:22:41 +0000</lastBuildDate>
+    <atom:link href="https://tedjohnsonworks.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Congratulations! I've Just Protected You From Yourself!</title>
+      <link>https://tedjohnsonworks.com/articles/congratulations-ive-just-protected-you-from-yourself.html</link>
+      <description>Ted Johnson’s phone-number and Apple Card experience, modern authentication, accessible account recovery and practical help when digital services fail.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/congratulations-ive-just-protected-you-from-yourself.html</guid>
+    </item>
+    <item>
+      <title>The Cheese Moved. So Did Ted.</title>
+      <link>https://tedjohnsonworks.com/cheese-moved-so-did-ted.html</link>
+      <description>Ted Johnson’s return to work and research on older Americans’ finances, physical demands, well-being and connection. Practical understanding across generations.</description>
+      <category>Ted's Stories</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/cheese-moved-so-did-ted.html</guid>
+    </item>
+    <item>
+      <title>Moving at the FREEZE of Business</title>
+      <link>https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html</link>
+      <description>Why security delays protect bank accounts, and why secure account recovery should still respect people.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/moving-at-the-freeze-of-business.html</guid>
+    </item>
+    <item>
+      <title>Is Your Face the New Password?</title>
+      <link>https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html</link>
+      <description>An accessible look at face recognition, passkeys, bodily change, and the human right to secure account recovery.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/is-your-face-the-new-password.html</guid>
+    </item>
+    <item>
+      <title>How Many Passwords Does One Human Need?</title>
+      <link>https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html</link>
+      <description>A practical, research-backed guide to password overload, password managers, passkeys, and account recovery.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/how-many-passwords-does-one-human-need.html</guid>
+    </item>
+    <item>
+      <title>Life Savings Gone. Here's Your Identity Monitoring Subscription.</title>
+      <link>https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html</link>
+      <description>Evidence on elder fraud, monitoring limits, real-time intervention, and what to do immediately after a scam.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/life-savings-gone-identity-monitoring-subscription.html</guid>
+    </item>
+    <item>
+      <title>AI for People Who Don’t Want to Become AI Experts</title>
+      <link>https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html</link>
+      <description>A plain-English approach to using AI for useful everyday work without hype, jargon, or pretending the tool is always right.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/ai-for-people-who-dont-want-to-become-ai-experts.html</guid>
+    </item>
+    <item>
+      <title>How I Built TedJohnsonWorks.com Without Hiring an Agency</title>
+      <link>https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html</link>
+      <description>A practical look at the stack and decisions behind TedJohnsonWorks.com: ChatGPT, GitHub, Astro, GitHub Actions, and Hostinger.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/how-i-built-ted-johnson-works.html</guid>
+    </item>
+    <item>
+      <title>How I Keep TedJohnsonWorks.com Running Without Babysitting It</title>
+      <link>https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html</link>
+      <description>How Ted Johnson keeps TedJohnsonWorks.com running with one source of truth, an automated GitHub deployment path, and Hostinger publishing the approved production branch.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/how-i-keep-tedjohnsonworks-running.html</guid>
+    </item>
+    <item>
+      <title>How I Use Payhip to Sell Practical Guides</title>
+      <link>https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html</link>
+      <description>A practical look at using Payhip for digital guides and direct services without building a full ecommerce system from scratch.</description>
+      <category>Tech Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/how-i-use-payhip-to-sell-practical-guides.html</guid>
+    </item>
+    <item>
+      <title>Working Under Chef Al Hynes at the Belleview-Biltmore</title>
+      <link>https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html</link>
+      <description>Ted Johnson remembers learning pastry and hotel-kitchen discipline under Chef Al Hynes at Florida's Belleview-Biltmore, including one unusual day serving Secret Service personnel during the George H. W. Bush vice-presidential years.</description>
+      <category>Food Works</category>
+      <guid isPermaLink="true">https://tedjohnsonworks.com/articles/working-under-chef-al-hynes-at-the-belleview-biltmore.html</guid>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+/* Ted's Stories only; retain the established navy, gold and Lexend design. */
+.stories-section { padding: 32px 0; }
+.stories-topics { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.stories-topics a { display: block; padding: 12px 18px; border: 1px solid #795600; border-radius: 10px; background: #fff; color: #0b132b; font-weight: 600; }
+.stories-feed { padding: 24px; border-left: 4px solid #795600; border-radius: 12px; background: #fff; }
+.stories-feed h3 { margin: 0; font-size: 1.3rem; }
+.stories-feed p { margin: 8px 0; }
+.stories-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.story-card h3 { margin: 0; font-size: clamp(1.3rem, 2.2vw, 1.6rem); line-height: 1.4; overflow-wrap: anywhere; }
+.story-card h3 a { display: block; color: #0b132b; }
+.story-card p { color: #333946; font-size: 1rem; line-height: 1.75; }
+.stories-section a:not(.button) { text-decoration: underline; text-underline-offset: .2em; }
+.stories-section a:not(.button):hover { text-decoration-thickness: 2px; }
+.stories-series { margin-bottom: 24px; }
+.stories-series h3 { margin-top: 0; }
+.story-date { color: #505866; }
+.stories-related { margin: 24px 0; padding: 20px 0; font-size: 1rem; line-height: 1.8; }
+.stories-related h3 { font-size: 1.2rem; line-height: 1.5; }
+@media (min-width: 901px) { .stories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .stories-section .card, .stories-feed { padding: 24px 20px; } }
