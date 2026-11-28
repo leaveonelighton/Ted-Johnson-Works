@@ -24,6 +24,9 @@ def render():
                         ('description', 'Practical articles, personal stories, and lessons from Ted Johnson’s work and life.'),
                         ('language', 'en-us')]:
         ET.SubElement(channel, name).text = value
+    built = next((r.get('feed_built_at') for r in records if r.get('feed_built_at')), None)
+    if built:
+        ET.SubElement(channel, 'lastBuildDate').text = built
     ET.SubElement(channel, f'{{{ATOM}}}link', href=ORIGIN + 'feed.xml',
                   rel='self', type='application/rss+xml')
     seen = set()
